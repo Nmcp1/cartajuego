@@ -191,6 +191,24 @@
 
   .tiny{ font-size:12px; color:var(--muted); }
 
+  /* ✅ thumb para trampas (faltaba) */
+  .thumb{
+    width:92px;
+    height:92px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:#111a33;
+    overflow:hidden;
+    flex:0 0 92px;
+    position:relative;
+  }
+  .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
   .endBar{
     margin-top:12px;
     padding:12px;
@@ -345,6 +363,10 @@
   let usedCharIds = new Set();
   let usedTrapIds = new Set();
 
+  // ✅ índices para resolver images en el board aunque WS no las mande
+  let charIndex = Object.create(null); // id -> card (con image)
+  let trapIndex = Object.create(null); // id -> trap (con image)
+
   let myPlayerNum = null;
   let lastPlayers = null;
   let winnerShown = false;
@@ -380,6 +402,14 @@
     selectedInfo.textContent = label + " (id=" + id + ")";
   }
 
+  function rebuildIndexes(){
+    charIndex = Object.create(null);
+    (cacheCards.characters || []).forEach(c => { charIndex[c.id] = c; });
+
+    trapIndex = Object.create(null);
+    (cacheCards.traps || []).forEach(t => { trapIndex[t.id] = t; });
+  }
+
   async function loadCards(){
     const res = await fetch(`/api/game/match/${MATCH_ID}/hand/`, {credentials:"include"});
     if (!res.ok) throw new Error("No pude cargar tu mano. ¿Estás logueado?");
@@ -387,6 +417,8 @@
 
     usedCharIds = new Set(cacheCards.used_chars || []);
     usedTrapIds = new Set(cacheCards.used_traps || []);
+
+    rebuildIndexes();
     renderHands();
   }
 
@@ -520,7 +552,6 @@
   }
 
   function startTimerUI(newDeadlineIso, secondsLeftFromServer){
-    // prefer ISO deadline
     if (newDeadlineIso) {
       deadlineMs = new Date(newDeadlineIso).getTime();
     } else if (typeof secondsLeftFromServer === "number") {
@@ -596,11 +627,19 @@
       if(slot.char){
         const ch = slot.char;
         cell.classList.add(ch.owner === 1 ? "p1" : "p2");
+
+        // ✅ resolver imagen aunque WS no la incluya:
+        // - primero ch.image (si viene)
+        // - si no, buscar por id en la mano (cache)
+        const imgSrc =
+          ch.image ||
+          (ch.id != null && charIndex[ch.id] ? charIndex[ch.id].image : null);
+
         cell.innerHTML = `
           <div class="badge ${ch.owner === 1 ? "p1" : "p2"}">P${ch.owner}</div>
           <div class="nameTag ${ch.owner === 1 ? "p1" : "p2"}">${ch.name}</div>
           <div class="char ${ch.owner === 1 ? "p1" : "p2"}">
-            ${ch.image ? `<img class="charImg" src="${ch.image}" alt="${ch.name}">` : ``}
+            ${imgSrc ? `<img class="charImg" src="${imgSrc}" alt="${ch.name}">` : ``}
             <div class="charOverlay"></div>
             <div class="u">${ch.up}</div>
             <div class="l">${ch.left}</div>
