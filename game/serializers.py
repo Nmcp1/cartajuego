@@ -6,6 +6,17 @@ from .models import (
 )
 
 
+def _image_url_from_context(serializer: serializers.Serializer, url: str) -> str:
+    """Devuelve URL absoluta si hay request en el context; si no, devuelve la url tal cual."""
+    request = serializer.context.get("request") if hasattr(serializer, "context") else None
+    if request is not None:
+        try:
+            return request.build_absolute_uri(url)
+        except Exception:
+            return url
+    return url
+
+
 class CardCharacterSerializer(serializers.ModelSerializer):
     image = serializers.SerializerMethodField()
 
@@ -16,7 +27,7 @@ class CardCharacterSerializer(serializers.ModelSerializer):
     def get_image(self, obj):
         if getattr(obj, "image", None):
             try:
-                return obj.image.url
+                return _image_url_from_context(self, obj.image.url)
             except Exception:
                 return None
         return None
@@ -32,7 +43,7 @@ class CardTrapSerializer(serializers.ModelSerializer):
     def get_image(self, obj):
         if getattr(obj, "image", None):
             try:
-                return obj.image.url
+                return _image_url_from_context(self, obj.image.url)
             except Exception:
                 return None
         return None

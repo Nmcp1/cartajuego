@@ -22,5 +22,8 @@ urlpatterns = [
     path("", include("webui.urls")),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# ✅ Servir archivos subidos (MEDIA) también en producción cuando no hay Nginx/S3.
+# Render (sin disco persistente o storage externo) puede perder estos archivos tras redeploy;
+# pero al menos se verán mientras existan en el filesystem del servicio.
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
