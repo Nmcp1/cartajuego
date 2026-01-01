@@ -191,7 +191,7 @@
 
   .tiny{ font-size:12px; color:var(--muted); }
 
-  /* ✅ thumb para trampas (faltaba) */
+  /* ✅ Thumb trampas (para que se vean bien) */
   .thumb{
     width:92px;
     height:92px;
@@ -243,7 +243,6 @@
   #mePill.p1{ background:#2c4fd6; color:#fff; }
   #mePill.p2{ background:#b73737; color:#fff; }
 
-  /* ✅ timer pill */
   #timerPill.warn{ background:rgba(255,165,0,.22); }
   #timerPill.danger{ background:rgba(255,90,90,.22); }
 </style>
@@ -359,19 +358,17 @@
   let selected = null;
 
   let cacheCards = {characters:[], traps:[], used_chars:[], used_traps:[]};
-
   let usedCharIds = new Set();
   let usedTrapIds = new Set();
 
-  // ✅ índices para resolver images en el board aunque WS no las mande
-  let charIndex = Object.create(null); // id -> card (con image)
-  let trapIndex = Object.create(null); // id -> trap (con image)
+  // ✅ índice por nombre (para resolver imagen en el board igual que la mano)
+  let charByName = Object.create(null);
 
   let myPlayerNum = null;
   let lastPlayers = null;
   let winnerShown = false;
 
-  // ✅ timer local
+  // timer local
   let deadlineMs = null;
   let timerInterval = null;
 
@@ -384,6 +381,36 @@
   closeWinnerBtn.addEventListener("click", ()=>{
     winnerModal.style.display = "none";
   });
+
+  function normName(s){
+    return (s || "")
+      .toString()
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+  }
+
+  function rebuildCharIndex(){
+    charByName = Object.create(null);
+    (cacheCards.characters || []).forEach(c=>{
+      const k = normName(c.name);
+      if (k) charByName[k] = c; // último gana (da igual)
+    });
+  }
+
+  // ✅ Usa la imagen "igual que en la mano"
+  // 1) busca por nombre en cacheCards.characters (que viene con image_url)
+  // 2) fallback: ch.image SOLO si es http(s) (evita /media roto)
+  function resolveCharImage(ch){
+    const k = normName(ch?.name);
+    const fromHand = k && charByName[k] ? charByName[k].image : null;
+    if (fromHand) return fromHand;
+
+    const raw = ch?.image;
+    if (typeof raw === "string" && (raw.startsWith("http://") || raw.startsWith("https://"))) return raw;
+
+    return null;
+  }
 
   function setMode(m){
     mode = m;
@@ -402,14 +429,6 @@
     selectedInfo.textContent = label + " (id=" + id + ")";
   }
 
-  function rebuildIndexes(){
-    charIndex = Object.create(null);
-    (cacheCards.characters || []).forEach(c => { charIndex[c.id] = c; });
-
-    trapIndex = Object.create(null);
-    (cacheCards.traps || []).forEach(t => { trapIndex[t.id] = t; });
-  }
-
   async function loadCards(){
     const res = await fetch(`/api/game/match/${MATCH_ID}/hand/`, {credentials:"include"});
     if (!res.ok) throw new Error("No pude cargar tu mano. ¿Estás logueado?");
@@ -418,7 +437,7 @@
     usedCharIds = new Set(cacheCards.used_chars || []);
     usedTrapIds = new Set(cacheCards.used_traps || []);
 
-    rebuildIndexes();
+    rebuildCharIndex();
     renderHands();
   }
 
@@ -489,6 +508,7 @@
       handTraps.appendChild(empty);
     }
 
+    // si seleccionaste una usada, limpiar
     if (selected && selected.kind === "CHAR" && usedCharIds.has(selected.id)) {
       selected = null; selectedInfo.textContent = "(ninguna)";
       document.querySelectorAll(".cardmini").forEach(x=>x.classList.remove("sel"));
@@ -528,6 +548,10 @@
 
     const p1u = players.p1?.username || "P1";
     const p2u = players.p2?.username || "P2";
+
+    const endTitle = document.getElementById("endTitle");
+    const endSub = document.getElementById("endSub");
+    const winnerPill = document.getElementById("winnerPill");
 
     if (winner === 0){
       winnerPill.textContent = "🤝 Empate";
@@ -604,11 +628,8 @@
     countPill.textContent = `P1: ${payload.counts?.p1 ?? 0} | P2: ${payload.counts?.p2 ?? 0}`;
 
     const status = (payload.status || "").toString().toLowerCase();
-    if (status === "active") {
-      startTimerUI(payload.turn_deadline, payload.seconds_left);
-    } else {
-      stopTimerUI();
-    }
+    if (status === "active") startTimerUI(payload.turn_deadline, payload.seconds_left);
+    else stopTimerUI();
 
     const nextUsedChars = new Set(payload.used_chars || []);
     const nextUsedTraps = new Set(payload.used_traps || []);
@@ -628,12 +649,8 @@
         const ch = slot.char;
         cell.classList.add(ch.owner === 1 ? "p1" : "p2");
 
-        // ✅ resolver imagen aunque WS no la incluya:
-        // - primero ch.image (si viene)
-        // - si no, buscar por id en la mano (cache)
-        const imgSrc =
-          ch.image ||
-          (ch.id != null && charIndex[ch.id] ? charIndex[ch.id].image : null);
+        // ✅ ESTA es la línea clave: mismo método que la mano (por nombre)
+        const imgSrc = resolveCharImage(ch);
 
         cell.innerHTML = `
           <div class="badge ${ch.owner === 1 ? "p1" : "p2"}">P${ch.owner}</div>
