@@ -1,0 +1,670 @@
+{% extends "base.html" %}
+{% block title %}Match{% endblock %}
+
+{% block head %}
+<style>
+  .board{
+    display:grid;
+    grid-template-columns:repeat(3, 110px);
+    gap:10px;
+    justify-content:start;
+  }
+
+  .cell{
+    width:110px;
+    height:110px;
+    border-radius:18px;
+    border:1px solid var(--line);
+    background:rgba(0,0,0,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+  }
+  .cell:hover{ box-shadow:0 0 0 2px rgba(45,91,255,.45); }
+
+  .cell.p1{ box-shadow:0 0 0 2px rgba(70,120,255,.85); }
+  .cell.p2{ box-shadow:0 0 0 2px rgba(255,90,90,.85); }
+
+  .badge{
+    position:absolute;
+    top:8px;
+    right:8px;
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#0f1730;
+    color:var(--muted);
+    z-index:6;
+  }
+  .badge.p1{ background:#2c4fd6; color:#fff; }
+  .badge.p2{ background:#b73737; color:#fff; }
+
+  .trapBadge{
+    position:absolute;
+    bottom:8px;
+    right:8px;
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#0f1730;
+    color:var(--muted);
+    z-index:6;
+  }
+
+  .nameTag{
+    position:absolute;
+    bottom:8px;
+    left:8px;
+    max-width:74px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:11px;
+    font-weight:900;
+    padding:3px 7px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(15,23,48,.92);
+    z-index:6;
+  }
+  .nameTag.p1{ color:#dbe6ff; }
+  .nameTag.p2{ color:#ffe0e0; }
+
+  .char{
+    width:92px;
+    height:92px;
+    border-radius:16px;
+    border:2px solid transparent;
+    background:#111a33;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    padding:6px;
+    position:relative;
+    overflow:hidden;
+  }
+  .char.p1{ border-color:#4f7cff; }
+  .char.p2{ border-color:#ff6b6b; }
+
+  .charImg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.55;
+    filter:contrast(1.05) saturate(1.05);
+  }
+
+  .charOverlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.6));
+    z-index:1;
+  }
+
+  .char > div{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    font-weight:800;
+  }
+
+  .char .u{ grid-column:2/3; grid-row:1/2; }
+  .char .d{ grid-column:2/3; grid-row:3/4; }
+  .char .l{ grid-column:1/2; grid-row:2/3; }
+  .char .r{ grid-column:3/4; grid-row:2/3; }
+
+  .hand{ display:flex; gap:10px; flex-wrap:wrap; }
+
+  .cardmini{
+    width:220px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:rgba(0,0,0,.18);
+    padding:10px;
+    cursor:pointer;
+    position:relative;
+  }
+  .cardmini.sel{ box-shadow:0 0 0 2px rgba(45,91,255,.6); }
+
+  .cardmini.used{
+    opacity:.45;
+    pointer-events:none;
+    filter: grayscale(.7);
+  }
+  .cardmini.used::after{
+    content:"✖";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:44px;
+    font-weight:900;
+    color:rgba(255,255,255,.95);
+    text-shadow:0 4px 18px rgba(0,0,0,.6);
+    z-index:20;
+  }
+  .cardmini.used::before{
+    content:"USADA";
+    position:absolute;
+    top:10px;
+    right:10px;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(15,23,48,.9);
+    color:var(--muted);
+    font-size:12px;
+    z-index:21;
+  }
+
+  .handCardRow{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  .miniChar{
+    width:92px;
+    height:92px;
+    flex:0 0 92px;
+  }
+  .handInfo{
+    min-width:0;
+    flex:1 1 auto;
+  }
+  .handName{
+    font-weight:900;
+    font-size:14px;
+    line-height:1.1;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-bottom:6px;
+  }
+
+  .tiny{ font-size:12px; color:var(--muted); }
+
+  .endBar{
+    margin-top:12px;
+    padding:12px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:#0f1730;
+    display:none;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+
+  .modalBack{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+  }
+  .modal{
+    width:min(520px, 92vw);
+    border-radius:18px;
+    border:1px solid var(--line);
+    background:#0f1730;
+    padding:18px;
+    box-shadow:0 12px 40px rgba(0,0,0,.35);
+  }
+  .modal h2{ margin:0 0 8px; }
+
+  #mePill.p1{ background:#2c4fd6; color:#fff; }
+  #mePill.p2{ background:#b73737; color:#fff; }
+
+  /* ✅ timer pill */
+  #timerPill.warn{ background:rgba(255,165,0,.22); }
+  #timerPill.danger{ background:rgba(255,90,90,.22); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="grid two">
+  <div class="card">
+    <div class="row" style="justify-content:space-between; flex-wrap:wrap; gap:10px;">
+      <div>
+        <h2 style="margin:0;">Match</h2>
+        <div class="muted">ID: <code>{{ match_id }}</code></div>
+      </div>
+
+      <div class="row" style="gap:10px; flex-wrap:wrap;">
+        <div class="pill" id="mePill">Tú: ...</div>
+        <div class="pill" id="turnPill">Turno: ?</div>
+        <div class="pill" id="timerPill">⏳ Tiempo: --</div>
+        <div class="pill" id="countPill">P1: 0 | P2: 0</div>
+        <div class="pill" id="winnerPill" style="display:none;">🏁 Ganador: ...</div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;" class="board" id="board"></div>
+
+    <div style="margin-top:14px;" class="row">
+      <button class="btn secondary" id="syncBtn">SYNC</button>
+      <div class="pill" id="statusPill">WS: conectando...</div>
+    </div>
+
+    <div class="endBar" id="endBar">
+      <div>
+        <div style="font-weight:900;" id="endTitle">Fin</div>
+        <div class="muted" id="endSub">—</div>
+      </div>
+      <a class="btn" href="/lobby/" id="backLobbyBtn">Volver al lobby</a>
+    </div>
+
+    <div class="muted" style="margin-top:10px; font-size:14px;">
+      Selecciona una carta → click en una celda vacía.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 8px;">Tu selección</h3>
+    <div class="row">
+      <div class="pill" id="selMode">Modo: Personaje</div>
+      <button class="btn secondary" id="modeChar">Personaje</button>
+      <button class="btn secondary" id="modeTrap">Trampa</button>
+    </div>
+
+    <div style="margin-top:10px;">
+      <div class="muted">Carta seleccionada:</div>
+      <div id="selectedInfo" style="font-weight:800; margin-top:6px;">(ninguna)</div>
+    </div>
+
+    <hr style="border:0; border-top:1px solid var(--line); margin:14px 0;">
+
+    <h3 style="margin:0 0 8px;">Personajes</h3>
+    <div class="hand" id="handChars"></div>
+
+    <h3 style="margin:18px 0 8px;">Trampas</h3>
+    <div class="hand" id="handTraps"></div>
+  </div>
+</div>
+
+<div class="modalBack" id="winnerModal">
+  <div class="modal">
+    <h2 id="winnerTitle">Fin de la partida</h2>
+    <div class="muted" id="winnerDesc"></div>
+    <div class="row" style="margin-top:14px; justify-content:flex-end; gap:10px; flex-wrap:wrap;">
+      <a class="btn" href="/lobby/" id="modalBackBtn">Volver al lobby</a>
+      <button class="btn secondary" id="closeWinnerBtn">Cerrar</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function(){
+  const MATCH_ID = "{{ match_id }}";
+  const MY_USERNAME = "{{ request.user.username|escapejs }}";
+
+  const boardEl = document.getElementById("board");
+  const statusPill = document.getElementById("statusPill");
+  const turnPill = document.getElementById("turnPill");
+  const timerPill = document.getElementById("timerPill");
+  const countPill = document.getElementById("countPill");
+  const winnerPill = document.getElementById("winnerPill");
+  const mePill = document.getElementById("mePill");
+  const syncBtn = document.getElementById("syncBtn");
+
+  const endBar = document.getElementById("endBar");
+  const endTitle = document.getElementById("endTitle");
+  const endSub = document.getElementById("endSub");
+
+  const handChars = document.getElementById("handChars");
+  const handTraps = document.getElementById("handTraps");
+
+  const selectedInfo = document.getElementById("selectedInfo");
+  const selMode = document.getElementById("selMode");
+  const modeCharBtn = document.getElementById("modeChar");
+  const modeTrapBtn = document.getElementById("modeTrap");
+
+  const winnerModal = document.getElementById("winnerModal");
+  const winnerTitle = document.getElementById("winnerTitle");
+  const winnerDesc  = document.getElementById("winnerDesc");
+  const closeWinnerBtn = document.getElementById("closeWinnerBtn");
+
+  let ws = null;
+  let mode = "CHAR";
+  let selected = null;
+
+  let cacheCards = {characters:[], traps:[], used_chars:[], used_traps:[]};
+
+  let usedCharIds = new Set();
+  let usedTrapIds = new Set();
+
+  let myPlayerNum = null;
+  let lastPlayers = null;
+  let winnerShown = false;
+
+  // ✅ timer local
+  let deadlineMs = null;
+  let timerInterval = null;
+
+  function wsUrl(path){
+    const proto = location.protocol === "https:" ? "wss" : "ws";
+    return `${proto}://${location.host}${path}`;
+  }
+  function setStatus(t){ statusPill.textContent = t; }
+
+  closeWinnerBtn.addEventListener("click", ()=>{
+    winnerModal.style.display = "none";
+  });
+
+  function setMode(m){
+    mode = m;
+    selMode.textContent = "Modo: " + (m === "CHAR" ? "Personaje" : "Trampa");
+    selected = null;
+    selectedInfo.textContent = "(ninguna)";
+    document.querySelectorAll(".cardmini").forEach(x=>x.classList.remove("sel"));
+  }
+  modeCharBtn.onclick = ()=>setMode("CHAR");
+  modeTrapBtn.onclick = ()=>setMode("TRAP");
+
+  function selectCard(el, kind, id, label){
+    document.querySelectorAll(".cardmini").forEach(x=>x.classList.remove("sel"));
+    el.classList.add("sel");
+    selected = {kind, id};
+    selectedInfo.textContent = label + " (id=" + id + ")";
+  }
+
+  async function loadCards(){
+    const res = await fetch(`/api/game/match/${MATCH_ID}/hand/`, {credentials:"include"});
+    if (!res.ok) throw new Error("No pude cargar tu mano. ¿Estás logueado?");
+    cacheCards = await res.json();
+
+    usedCharIds = new Set(cacheCards.used_chars || []);
+    usedTrapIds = new Set(cacheCards.used_traps || []);
+    renderHands();
+  }
+
+  function renderHands(){
+    handChars.innerHTML = "";
+
+    let anyChar = false;
+    (cacheCards.characters || []).forEach(c=>{
+      anyChar = true;
+      const isUsed = usedCharIds.has(c.id);
+
+      const el = document.createElement("div");
+      el.className = "cardmini" + (isUsed ? " used" : "");
+      el.innerHTML = `
+        <div class="handCardRow">
+          <div class="char miniChar">
+            ${c.image ? `<img class="charImg" src="${c.image}" alt="${c.name}">` : ``}
+            <div class="charOverlay"></div>
+            <div class="u">${c.up}</div>
+            <div class="l">${c.left}</div>
+            <div class="r">${c.right}</div>
+            <div class="d">${c.down}</div>
+          </div>
+          <div class="handInfo">
+            <div class="handName">🧍 ${c.name}</div>
+            <div class="tiny">U:${c.up} D:${c.down} L:${c.left} R:${c.right}</div>
+            <div class="tiny">id=${c.id}</div>
+          </div>
+        </div>
+      `;
+      if (!isUsed) el.onclick = ()=>selectCard(el,"CHAR",c.id,`🧍 ${c.name}`);
+      handChars.appendChild(el);
+    });
+
+    if (!anyChar){
+      const empty = document.createElement("div");
+      empty.className = "muted";
+      empty.style.fontSize = "14px";
+      empty.textContent = "No tienes personajes en mano.";
+      handChars.appendChild(empty);
+    }
+
+    handTraps.innerHTML = "";
+    let anyTrap = false;
+    (cacheCards.traps || []).forEach(t=>{
+      anyTrap = true;
+      const isUsed = usedTrapIds.has(t.id);
+
+      const el = document.createElement("div");
+      el.className = "cardmini" + (isUsed ? " used" : "");
+      el.innerHTML = `
+        <div class="handCardRow">
+          <div class="thumb">${t.image ? `<img src="${t.image}" alt="${t.name}">` : ``}</div>
+          <div class="handInfo">
+            <div class="handName">🪤 ${t.name}</div>
+            <div class="tiny">${t.trap_type} (-${t.value})</div>
+            <div class="tiny">id=${t.id}</div>
+          </div>
+        </div>
+      `;
+      if (!isUsed) el.onclick = ()=>selectCard(el,"TRAP",t.id,`🪤 ${t.name}`);
+      handTraps.appendChild(el);
+    });
+
+    if (!anyTrap){
+      const empty = document.createElement("div");
+      empty.className = "muted";
+      empty.style.fontSize = "14px";
+      empty.textContent = "No tienes trampas en mano.";
+      handTraps.appendChild(empty);
+    }
+
+    if (selected && selected.kind === "CHAR" && usedCharIds.has(selected.id)) {
+      selected = null; selectedInfo.textContent = "(ninguna)";
+      document.querySelectorAll(".cardmini").forEach(x=>x.classList.remove("sel"));
+    }
+    if (selected && selected.kind === "TRAP" && usedTrapIds.has(selected.id)) {
+      selected = null; selectedInfo.textContent = "(ninguna)";
+      document.querySelectorAll(".cardmini").forEach(x=>x.classList.remove("sel"));
+    }
+  }
+
+  function computeMyPlayerNum(players){
+    if(!players) return null;
+    if(players.p1?.username === MY_USERNAME) return 1;
+    if(players.p2?.username === MY_USERNAME) return 2;
+    return null;
+  }
+
+  function boardIsFull(board){
+    return (board || []).length === 9 && (board || []).every(s => !!(s && s.char));
+  }
+
+  function computeWinnerFromCounts(payload){
+    const p1 = payload?.counts?.p1 ?? 0;
+    const p2 = payload?.counts?.p2 ?? 0;
+    if (p1 === p2) return 0;
+    return p1 > p2 ? 1 : 2;
+  }
+
+  function showWinner(payload){
+    if (winnerShown) return;
+    winnerShown = true;
+
+    const players = payload.players || lastPlayers || {};
+    const winner = (payload.winner !== undefined && payload.winner !== null)
+      ? payload.winner
+      : computeWinnerFromCounts(payload);
+
+    const p1u = players.p1?.username || "P1";
+    const p2u = players.p2?.username || "P2";
+
+    if (winner === 0){
+      winnerPill.textContent = "🤝 Empate";
+      endTitle.textContent = "🤝 Empate";
+    } else if (winner === 1){
+      winnerPill.textContent = `🏆 Ganó ${p1u}`;
+      endTitle.textContent = `🏆 Ganó ${p1u}`;
+    } else {
+      winnerPill.textContent = `🏆 Ganó ${p2u}`;
+      endTitle.textContent = `🏆 Ganó ${p2u}`;
+    }
+    winnerPill.style.display = "inline-flex";
+
+    endBar.style.display = "flex";
+    endSub.textContent = `P1: ${payload.counts?.p1 ?? 0} | P2: ${payload.counts?.p2 ?? 0}`;
+
+    winnerTitle.textContent = endTitle.textContent;
+    winnerDesc.textContent = endSub.textContent;
+    winnerModal.style.display = "flex";
+
+    stopTimerUI();
+  }
+
+  function startTimerUI(newDeadlineIso, secondsLeftFromServer){
+    // prefer ISO deadline
+    if (newDeadlineIso) {
+      deadlineMs = new Date(newDeadlineIso).getTime();
+    } else if (typeof secondsLeftFromServer === "number") {
+      deadlineMs = Date.now() + (secondsLeftFromServer * 1000);
+    } else {
+      deadlineMs = null;
+    }
+
+    stopTimerUI();
+    tickTimerUI();
+    timerInterval = setInterval(tickTimerUI, 250);
+  }
+
+  function stopTimerUI(){
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = null;
+  }
+
+  function tickTimerUI(){
+    if (!deadlineMs) {
+      timerPill.textContent = "⏳ Tiempo: --";
+      timerPill.classList.remove("warn","danger");
+      return;
+    }
+    const msLeft = deadlineMs - Date.now();
+    const s = Math.max(0, Math.ceil(msLeft / 1000));
+    timerPill.textContent = `⏳ Tiempo: ${s}s`;
+
+    timerPill.classList.remove("warn","danger");
+    if (s <= 10) timerPill.classList.add("danger");
+    else if (s <= 20) timerPill.classList.add("warn");
+  }
+
+  function renderBoard(msg){
+    boardEl.innerHTML = "";
+    const payload = msg.payload || msg;
+
+    lastPlayers = payload.players || lastPlayers;
+    myPlayerNum = myPlayerNum ?? computeMyPlayerNum(lastPlayers);
+
+    if (myPlayerNum){
+      const meName = (myPlayerNum === 1 ? (lastPlayers?.p1?.username || MY_USERNAME) : (lastPlayers?.p2?.username || MY_USERNAME));
+      mePill.textContent = `Tú: ${meName} (P${myPlayerNum})`;
+      mePill.classList.add(myPlayerNum === 1 ? "p1" : "p2");
+    } else {
+      mePill.textContent = `Tú: ${MY_USERNAME}`;
+    }
+
+    turnPill.textContent = "Turno: P" + payload.turn_player;
+    countPill.textContent = `P1: ${payload.counts?.p1 ?? 0} | P2: ${payload.counts?.p2 ?? 0}`;
+
+    const status = (payload.status || "").toString().toLowerCase();
+    if (status === "active") {
+      startTimerUI(payload.turn_deadline, payload.seconds_left);
+    } else {
+      stopTimerUI();
+    }
+
+    const nextUsedChars = new Set(payload.used_chars || []);
+    const nextUsedTraps = new Set(payload.used_traps || []);
+    const changedChars = nextUsedChars.size !== usedCharIds.size || [...nextUsedChars].some(v => !usedCharIds.has(v));
+    const changedTraps = nextUsedTraps.size !== usedTrapIds.size || [...nextUsedTraps].some(v => !usedTrapIds.has(v));
+    if (changedChars || changedTraps) {
+      usedCharIds = nextUsedChars;
+      usedTrapIds = nextUsedTraps;
+      renderHands();
+    }
+
+    (payload.board || []).forEach((slot,i)=>{
+      const cell = document.createElement("div");
+      cell.className = "cell";
+
+      if(slot.char){
+        const ch = slot.char;
+        cell.classList.add(ch.owner === 1 ? "p1" : "p2");
+        cell.innerHTML = `
+          <div class="badge ${ch.owner === 1 ? "p1" : "p2"}">P${ch.owner}</div>
+          <div class="nameTag ${ch.owner === 1 ? "p1" : "p2"}">${ch.name}</div>
+          <div class="char ${ch.owner === 1 ? "p1" : "p2"}">
+            ${ch.image ? `<img class="charImg" src="${ch.image}" alt="${ch.name}">` : ``}
+            <div class="charOverlay"></div>
+            <div class="u">${ch.up}</div>
+            <div class="l">${ch.left}</div>
+            <div class="r">${ch.right}</div>
+            <div class="d">${ch.down}</div>
+          </div>
+        `;
+      } else {
+        cell.innerHTML = `<div class="muted">(${i})</div>`;
+      }
+
+      if(slot.trap){
+        const tb = document.createElement("div");
+        tb.className = "trapBadge";
+        tb.textContent = slot.trap.present ? "🪤 ?" : (slot.trap.armed ? "🪤 ARM" : "🪤 USED");
+        cell.appendChild(tb);
+      }
+
+      cell.onclick = ()=>{
+        const st = (payload.status || "").toString().toLowerCase();
+        if (st === "finished" || boardIsFull(payload.board)) return;
+
+        if(!selected) return alert("Selecciona una carta");
+        if(!ws || ws.readyState !== 1) return alert("WS no conectado.");
+
+        if(selected.kind==="CHAR"){
+          if (usedCharIds.has(selected.id)) return alert("Esa carta ya fue usada.");
+          ws.send(JSON.stringify({type:"PLAY_CHARACTER", card_id:selected.id, pos:i}));
+        } else {
+          if (usedTrapIds.has(selected.id)) return alert("Esa trampa ya fue usada.");
+          ws.send(JSON.stringify({type:"PLACE_TRAP", trap_id:selected.id, pos:i}));
+        }
+      };
+
+      boardEl.appendChild(cell);
+    });
+
+    if (status === "finished" || boardIsFull(payload.board)) {
+      if (payload.winner === undefined || payload.winner === null) payload.winner = computeWinnerFromCounts(payload);
+      showWinner(payload);
+    }
+  }
+
+  function connectWS(){
+    ws = new WebSocket(wsUrl(`/ws/match/${MATCH_ID}/`));
+    ws.onopen = ()=>setStatus("WS: conectado");
+    ws.onclose = ()=>setStatus("WS: desconectado");
+    ws.onerror = ()=>setStatus("WS: error");
+    ws.onmessage = ev=>{
+      const msg = JSON.parse(ev.data || "{}");
+      if(msg.type==="STATE") renderBoard(msg);
+      if(msg.type==="ERROR") alert("ERROR: " + msg.message);
+    };
+  }
+
+  syncBtn.onclick = ()=>{
+    if (ws && ws.readyState === 1) ws.send(JSON.stringify({type:"SYNC"}));
+  };
+
+  setMode("CHAR");
+  connectWS();
+  loadCards().catch(err => alert(err.message));
+})();
+</script>
+{% endblock %}

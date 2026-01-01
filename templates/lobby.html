@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}Lobby{% endblock %}
+
+{% block content %}
+  <div class="grid two">
+    <div class="card">
+      <h2 style="margin:0 0 8px;">Lobby</h2>
+      <p class="muted" style="margin-top:0;">
+        Busca partida. Cuando haya otro jugador en cola, se crea una partida automáticamente y te redirige al match.
+      </p>
+
+      <div class="row" style="flex-wrap:wrap; gap:10px;">
+        <button class="btn" id="joinBtn">Buscar partida</button>
+        <button class="btn secondary" id="leaveBtn" disabled>Salir de cola</button>
+
+        <!-- ✅ nuevo -->
+        <a class="btn secondary" href="/deck/">Editar baraja</a>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div class="pill" id="statusPill">Estado: idle</div>
+      </div>
+
+      <div class="muted" style="margin-top:10px; font-size:14px;">
+        Matchmaking: <code>HTTP polling</code> (sin Redis)
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px;">Tips</h3>
+      <ul class="muted" style="margin:0; padding-left:18px;">
+        <li>Abre 2 navegadores o modo incógnito con otro usuario para matchear.</li>
+        <li>Cuando encuentra match, te redirige automáticamente.</li>
+        <li>Antes de buscar partida, arma tu baraja en <code>/deck/</code>.</li>
+      </ul>
+
+      <hr style="border:0; border-top:1px solid var(--line); margin:14px 0;">
+
+      <div class="muted" style="font-size:14px;">
+        Endpoints:
+        <ul style="margin:6px 0 0; padding-left:18px;">
+          <li><code>/api/game/queue/join/</code></li>
+          <li><code>/api/game/queue/leave/</code></li>
+          <li><code>/api/game/queue/status/</code></li>
+          <li><code>/api/game/deck/</code> (API)</li>
+          <li><code>/deck/</code> (UI editor)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function(){
+  const joinBtn = document.getElementById("joinBtn");
+  const leaveBtn = document.getElementById("leaveBtn");
+  const statusPill = document.getElementById("statusPill");
+
+  let poll = null;
+
+  function setStatus(t){ statusPill.textContent = "Estado: " + t; }
+
+  function getCookie(name){
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === (name + "=")) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  const csrftoken = getCookie("csrftoken");
+
+  async function post(url){
+    const res = await fetch(url, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "X-Requested-With": "fetch",
+        "X-CSRFToken": csrftoken,
+      },
+    });
+    if (!res.ok) throw new Error("Error POST " + url);
+    return res.json();
+  }
+
+  async function get(url){
+    const res = await fetch(url, {credentials:"include"});
+    if (!res.ok) throw new Error("Error GET " + url);
+    return res.json();
+  }
+
+  async function startPolling(){
+    if (poll) return;
+    poll = setInterval(async ()=>{
+      try{
+        const s = await get("/api/game/queue/status/");
+        if (s.status === "MATCH_FOUND"){
+          clearInterval(poll); poll = null;
+          window.location.href = `/match/${s.match_id}/`;
+          return;
+        }
+        setStatus((s.status || "IDLE").toLowerCase());
+      } catch(e){
+        setStatus("error");
+      }
+    }, 1200);
+  }
+
+  joinBtn.addEventListener("click", async ()=>{
+    try{
+      const r = await post("/api/game/queue/join/");
+      if (r.status === "MATCH_FOUND"){
+        window.location.href = `/match/${r.match_id}/`;
+        return;
+      }
+      setStatus("queued");
+      joinBtn.disabled = true;
+      leaveBtn.disabled = false;
+      startPolling();
+    } catch(e){
+      alert("No pude entrar a cola: " + e.message);
+    }
+  });
+
+  leaveBtn.addEventListener("click", async ()=>{
+    try{
+      await post("/api/game/queue/leave/");
+    } catch(e){}
+    if (poll){ clearInterval(poll); poll = null; }
+    setStatus("idle");
+    joinBtn.disabled = false;
+    leaveBtn.disabled = true;
+  });
+})();
+</script>
+{% endblock %}

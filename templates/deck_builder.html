@@ -1,0 +1,386 @@
+{% extends "base.html" %}
+{% block title %}Mi Baraja{% endblock %}
+
+{% block head %}
+<style>
+  .wrap{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+  .sectionTitle{ margin:0 0 10px; }
+  .toolbar{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+  .kpis{ display:flex; gap:10px; flex-wrap:wrap; }
+
+  .list{ display:flex; flex-wrap:wrap; gap:10px; }
+  .cardPick{
+    width:260px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:rgba(0,0,0,.18);
+    padding:10px;
+    position:relative;
+    cursor:pointer;
+    user-select:none;
+  }
+  .cardPick.sel{ box-shadow:0 0 0 2px rgba(45,91,255,.6); }
+  .cardPick.disabled{ opacity:.45; pointer-events:none; filter: grayscale(.8); }
+
+  .row2{ display:flex; gap:12px; align-items:center; }
+  .miniChar{
+    width:92px; height:92px;
+    border-radius:16px;
+    border:2px solid transparent;
+    background:#111a33;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    padding:6px;
+    position:relative;
+    overflow:hidden;
+    flex:0 0 92px;
+  }
+  .miniChar .u{ grid-column:2/3; grid-row:1/2; text-align:center; font-weight:900; z-index:2; }
+  .miniChar .d{ grid-column:2/3; grid-row:3/4; text-align:center; font-weight:900; z-index:2; }
+  .miniChar .l{ grid-column:1/2; grid-row:2/3; text-align:center; font-weight:900; z-index:2; }
+  .miniChar .r{ grid-column:3/4; grid-row:2/3; text-align:center; font-weight:900; z-index:2; }
+
+  .charImg{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:.55;
+    filter:contrast(1.05) saturate(1.05);
+  }
+  .charOverlay{
+    position:absolute; inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.6));
+    z-index:1;
+  }
+
+  .info{ min-width:0; flex:1 1 auto; }
+  .name{ font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .tiny{ font-size:12px; color:var(--muted); }
+
+  .qtyPill{
+    position:absolute; top:10px; right:10px;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(15,23,48,.9);
+    color:var(--muted);
+    font-size:12px;
+  }
+
+  .modeBox{
+    padding:10px;
+    border-radius:16px;
+    border:1px solid var(--line);
+    background:#0f1730;
+  }
+
+  .warn{ color: #ffcc66; }
+  .ok{ color: #8ff0a4; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- fuerza cookie CSRF incluso si todo es JS -->
+<form style="display:none">{% csrf_token %}</form>
+
+<div class="card">
+  <div class="toolbar">
+    <div>
+      <h2 style="margin:0;">Mi Baraja</h2>
+      <div class="muted">Elige qué cartas de tu inventario formarán parte del mazo activo.</div>
+    </div>
+
+    <div class="kpis">
+      <div class="pill" id="kpiChars">🧍 Personajes: 0</div>
+      <div class="pill" id="kpiTraps">🪤 Trampas: 0</div>
+      <div class="pill" id="kpiMode">Modo: —</div>
+    </div>
+  </div>
+
+  <div class="modeBox" style="margin-top:12px;">
+    <div class="row" style="gap:10px; flex-wrap:wrap;">
+      <div class="pill" style="font-weight:900;">Modo de reglas</div>
+      <label class="row" style="gap:8px; align-items:center; cursor:pointer;">
+        <input type="radio" name="mode" value="MIN" checked>
+        <span>Mínimo (recomendado): <b>5 personajes</b> y <b>3 trampas</b> mínimo</span>
+      </label>
+      <label class="row" style="gap:8px; align-items:center; cursor:pointer;">
+        <input type="radio" name="mode" value="FREE">
+        <span>Libre (sin mínimos): juega con lo que tengas</span>
+      </label>
+      <div class="muted" id="modeHint" style="margin-left:auto;">—</div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:12px; gap:10px; flex-wrap:wrap;">
+    <input class="input" id="search" placeholder="Buscar por nombre..." style="max-width:320px;">
+    <button class="btn secondary" id="clearBtn" type="button">Limpiar selección</button>
+    <button class="btn" id="saveBtn" type="button">Guardar mazo activo</button>
+    <div class="pill" id="statusPill">Cargando...</div>
+  </div>
+
+  <div class="wrap" style="margin-top:14px;">
+    <div class="card">
+      <h3 class="sectionTitle">Personajes (inventario)</h3>
+      <div class="muted" id="charHint" style="margin-bottom:8px;">—</div>
+      <div class="list" id="charsList"></div>
+    </div>
+
+    <div class="card">
+      <h3 class="sectionTitle">Trampas (inventario)</h3>
+      <div class="muted" id="trapHint" style="margin-bottom:8px;">—</div>
+      <div class="list" id="trapsList"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function(){
+  const statusPill = document.getElementById("statusPill");
+  const kpiChars = document.getElementById("kpiChars");
+  const kpiTraps = document.getElementById("kpiTraps");
+  const kpiMode  = document.getElementById("kpiMode");
+  const modeHint = document.getElementById("modeHint");
+  const charHint = document.getElementById("charHint");
+  const trapHint = document.getElementById("trapHint");
+
+  const charsList = document.getElementById("charsList");
+  const trapsList = document.getElementById("trapsList");
+
+  const saveBtn = document.getElementById("saveBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const search = document.getElementById("search");
+
+  let inventory = {characters:[], traps:[]};
+  let deck = null;
+
+  // selected sets (IDs)
+  let selChars = new Set();
+  let selTraps = new Set();
+
+  // mode: MIN or FREE
+  let mode = "MIN";
+
+  const MIN_CHARS = 5;
+  const MIN_TRAPS = 3;
+
+  function setStatus(t){ statusPill.textContent = t; }
+
+  function getCookie(name){
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === (name + "=")) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+  const csrftoken = getCookie("csrftoken");
+
+  function currentMode(){
+    return document.querySelector('input[name="mode"]:checked')?.value || "MIN";
+  }
+
+  function normalizeStr(s){ return (s || "").toString().toLowerCase(); }
+
+  function updateKPIs(){
+    kpiChars.textContent = `🧍 Personajes: ${selChars.size}`;
+    kpiTraps.textContent = `🪤 Trampas: ${selTraps.size}`;
+    kpiMode.textContent = `Modo: ${mode === "MIN" ? "Mínimo" : "Libre"}`;
+
+    if (mode === "MIN"){
+      modeHint.innerHTML = `Requisitos: <b>${MIN_CHARS}</b> personajes y <b>${MIN_TRAPS}</b> trampas mínimo.`;
+    } else {
+      modeHint.textContent = "Sin mínimos (el matchmaking roba lo que pueda).";
+    }
+
+    const okChars = mode === "FREE" || selChars.size >= MIN_CHARS;
+    const okTraps = mode === "FREE" || selTraps.size >= MIN_TRAPS;
+
+    charHint.innerHTML = okChars
+      ? `<span class="ok">✅ Cumple mínimo de personajes.</span>`
+      : `<span class="warn">⚠ Te faltan ${MIN_CHARS - selChars.size} personajes para el mínimo.</span>`;
+
+    trapHint.innerHTML = okTraps
+      ? `<span class="ok">✅ Cumple mínimo de trampas.</span>`
+      : `<span class="warn">⚠ Te faltan ${MIN_TRAPS - selTraps.size} trampas para el mínimo.</span>`;
+
+    saveBtn.disabled = !(okChars && okTraps);
+  }
+
+  function cardCharHTML(c){
+    // c viene de inventory: {card:{...}, quantity}
+    const card = c.card;
+    return `
+      <div class="row2">
+        <div class="miniChar">
+          ${card.image ? `<img class="charImg" src="${card.image}" alt="${card.name}">` : ``}
+          <div class="charOverlay"></div>
+          <div class="u">${card.up}</div>
+          <div class="l">${card.left}</div>
+          <div class="r">${card.right}</div>
+          <div class="d">${card.down}</div>
+        </div>
+        <div class="info">
+          <div class="name">${card.name}</div>
+          <div class="tiny">U:${card.up} D:${card.down} L:${card.left} R:${card.right} • ${card.rarity}</div>
+          <div class="tiny">id=${card.id}</div>
+        </div>
+      </div>
+      <div class="qtyPill">x${c.quantity}</div>
+    `;
+  }
+
+  function cardTrapHTML(t){
+    const trap = t.trap;
+    return `
+      <div class="row2">
+        <div class="thumb" style="width:56px;height:56px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0f1730;flex:0 0 56px;">
+          ${trap.image ? `<img src="${trap.image}" alt="${trap.name}" style="width:100%;height:100%;object-fit:cover;display:block;">` : ``}
+        </div>
+        <div class="info">
+          <div class="name">${trap.name}</div>
+          <div class="tiny">${trap.trap_type} (-${trap.value}) • ${trap.rarity}</div>
+          <div class="tiny">id=${trap.id}</div>
+        </div>
+      </div>
+      <div class="qtyPill">x${t.quantity}</div>
+    `;
+  }
+
+  function render(){
+    const q = normalizeStr(search.value);
+
+    charsList.innerHTML = "";
+    trapsList.innerHTML = "";
+
+    (inventory.characters || []).forEach(entry=>{
+      const id = entry.card?.id;
+      if (!id) return;
+
+      const name = normalizeStr(entry.card?.name);
+      if (q && !name.includes(q)) return;
+
+      const el = document.createElement("div");
+      el.className = "cardPick" + (selChars.has(id) ? " sel" : "");
+      el.innerHTML = cardCharHTML(entry);
+      el.onclick = ()=>{
+        if (selChars.has(id)) selChars.delete(id);
+        else selChars.add(id);
+        render();
+      };
+      charsList.appendChild(el);
+    });
+
+    (inventory.traps || []).forEach(entry=>{
+      const id = entry.trap?.id;
+      if (!id) return;
+
+      const name = normalizeStr(entry.trap?.name);
+      if (q && !name.includes(q)) return;
+
+      const el = document.createElement("div");
+      el.className = "cardPick" + (selTraps.has(id) ? " sel" : "");
+      el.innerHTML = cardTrapHTML(entry);
+      el.onclick = ()=>{
+        if (selTraps.has(id)) selTraps.delete(id);
+        else selTraps.add(id);
+        render();
+      };
+      trapsList.appendChild(el);
+    });
+
+    updateKPIs();
+  }
+
+  async function loadAll(){
+    setStatus("Cargando inventario...");
+    const invRes = await fetch("/api/game/inventory/", {credentials:"include"});
+    if (!invRes.ok) throw new Error("No pude cargar tu inventario.");
+    inventory = await invRes.json();
+
+    setStatus("Cargando mazo activo...");
+    const deckRes = await fetch("/api/game/deck/", {credentials:"include"});
+    if (!deckRes.ok) throw new Error("No pude cargar tu mazo.");
+    deck = await deckRes.json();
+
+    // precargar selección desde deck
+    selChars = new Set((deck.characters || []).map(x=>x.id));
+    selTraps = new Set((deck.traps || []).map(x=>x.id));
+
+    setStatus("Listo ✅");
+    render();
+  }
+
+  async function saveDeck(){
+    mode = currentMode();
+    updateKPIs();
+    if (saveBtn.disabled) return;
+
+    setStatus("Guardando...");
+    const body = {
+      name: deck?.name || "Mi mazo",
+      character_ids: Array.from(selChars),
+      trap_ids: Array.from(selTraps),
+    };
+
+    const res = await fetch("/api/game/deck/", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type":"application/json",
+        "X-CSRFToken": csrftoken,
+        "X-Requested-With": "fetch",
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok){
+      const txt = await res.text();
+      throw new Error("Error guardando mazo: " + txt);
+    }
+
+    deck = await res.json();
+    setStatus("Guardado ✅");
+  }
+
+  // events
+  document.querySelectorAll('input[name="mode"]').forEach(r=>{
+    r.addEventListener("change", ()=>{
+      mode = currentMode();
+      updateKPIs();
+    });
+  });
+
+  clearBtn.onclick = ()=>{
+    selChars = new Set();
+    selTraps = new Set();
+    render();
+  };
+
+  saveBtn.onclick = ()=>{
+    saveDeck().catch(e=>alert(e.message));
+  };
+
+  search.addEventListener("input", ()=>render());
+
+  // init
+  mode = currentMode();
+  kpiMode.textContent = `Modo: ${mode === "MIN" ? "Mínimo" : "Libre"}`;
+  loadAll().catch(e=>{
+    console.error(e);
+    setStatus("Error ❌");
+    alert(e.message);
+  });
+})();
+</script>
+{% endblock %}

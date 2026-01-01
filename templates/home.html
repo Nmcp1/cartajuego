@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Home - Cartas 3x3{% endblock %}
+
+{% block content %}
+  <div class="grid two">
+    <div class="card">
+      <h2 style="margin:0 0 6px;">Juego de cartas en tablero 3x3</h2>
+      <p class="muted" style="margin:0 0 14px;">
+        Turnos, capturas por lados y trampas ocultas. Backend server-authoritative con WS.
+      </p>
+
+      {% if user.is_authenticated %}
+        <a class="btn" href="/lobby/">Ir al Lobby</a>
+      {% else %}
+        <div class="row">
+          <a class="btn" href="/register/">Crear cuenta</a>
+          <a class="btn secondary" href="/login/">Iniciar sesión</a>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px;">Qué incluye este MVP</h3>
+      <ul class="muted" style="margin:0; padding-left:18px;">
+        <li>Matchmaking WS simple (2 players)</li>
+        <li>Partida WS: jugar personaje, activar trampa, capturar</li>
+        <li>Oculta trampas al rival hasta activación</li>
+        <li>Una sola vez cada carta por partida</li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

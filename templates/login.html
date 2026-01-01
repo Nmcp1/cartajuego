@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <div class="card" style="max-width:520px; margin:0 auto;">
+    <h2 style="margin:0 0 8px;">Iniciar sesión</h2>
+    <p class="muted" style="margin-top:0;">Usa usuario y contraseña.</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="grid" style="gap:10px;">
+        {{ form.as_p }}
+        {% if form.non_field_errors %}
+          <div class="error">{{ form.non_field_errors }}</div>
+        {% endif %}
+        <button class="btn" type="submit">Entrar</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

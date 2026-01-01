@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+
+{% block content %}
+  <div class="card" style="max-width:520px; margin:0 auto;">
+    <h2 style="margin:0 0 8px;">Crear cuenta</h2>
+    <p class="muted" style="margin-top:0;">Registro simple con sesión Django.</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="grid" style="gap:10px;">
+        {{ form.as_p }}
+        {% if form.errors %}
+          <div class="error">Revisa los campos (password, etc.).</div>
+        {% endif %}
+        <button class="btn" type="submit">Registrarme</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
