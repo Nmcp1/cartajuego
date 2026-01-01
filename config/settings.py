@@ -60,45 +60,31 @@ WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
 # =========================
-# DATABASE: SQLite local / Neon en Render
+# DATABASE: SOLO Neon (Postgres)
 # =========================
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+if not DATABASE_URL:
+    raise RuntimeError("DATABASE_URL no está definido. Este proyecto usa SOLO Neon/Postgres.")
 
-if DATABASE_URL:
-    # Espera algo tipo: postgresql://user:pass@host:5432/dbname?sslmode=require
-    u = urlparse(DATABASE_URL)
-    # u.path incluye /dbname
-    db_name = u.path.lstrip("/") if u.path else ""
-    qs = parse_qs(u.query or "")
+u = urlparse(DATABASE_URL)
+db_name = u.path.lstrip("/") if u.path else ""
+qs = parse_qs(u.query or "")
+sslmode = (qs.get("sslmode", ["require"])[0]) or "require"
 
-    # sslmode: Neon requiere TLS. Si ya viene en la URL, igual dejamos OPTIONS como respaldo.
-    sslmode = (qs.get("sslmode", ["require"])[0]) or "require"
-
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": db_name,
-            "USER": u.username or "",
-            "PASSWORD": u.password or "",
-            "HOST": u.hostname or "",
-            "PORT": str(u.port or 5432),
-            "CONN_MAX_AGE": 60,
-            "OPTIONS": {"sslmode": sslmode},
-        }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": db_name,
+        "USER": u.username or "",
+        "PASSWORD": u.password or "",
+        "HOST": u.hostname or "",
+        "PORT": str(u.port or 5432),
+        "CONN_MAX_AGE": 60,
+        "OPTIONS": {"sslmode": sslmode},
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 LANGUAGE_CODE = "es-cl"

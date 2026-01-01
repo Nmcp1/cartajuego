@@ -1,0 +1,2852 @@
+﻿[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-11-25T18:03:52.159Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Nmclp: a",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-11-25T18:03:52.159Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Nmclp: pico pal que lee",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-11-25T18:04:44.086Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "7QQMUKUG (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-11-25T18:06:28.240Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "E1NP6ZS2 (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-11-26T00:12:03.739Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "4XB4XQG8 (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-11-26T00:16:48.751Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "M72HV970 (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-11-26T00:32:31.312Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "PN2JFELW (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-11-26T00:51:52.091Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "IA8BYUE7 (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-11-26T01:53:38.893Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "QPSF0S4P (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-11-26T14:49:47.421Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "2OCW1DN5 (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-11-26T19:49:54.935Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "VY3RMBCS (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-11-26T20:23:12.917Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "3AAXPOWG (DISPONIBLE)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-11-26T21:13:52.148Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "moderador",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-11-26T21:22:22.791Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "moderador",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-11-26T21:35:47.909Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "tester1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-11-27T05:44:11.427Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 100)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-11-28T06:56:23.284Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 20)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-11-28T06:57:27.886Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 31)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-01T00:42:58.797Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Koro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-01T00:43:21.075Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Koro",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-01T01:52:02.931Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 128)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-01T01:57:44.801Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 2)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipped pants\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-01T14:13:12.670Z",
+    "user": 1,
+    "content_type": 24,
+    "object_id": "22",
+    "object_repr": "Lobby #22 - nightmare_freddy (finished)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Total damage\", \"Log text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-01T14:14:01.617Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "58",
+    "object_repr": "charpinion en lobby 22",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is alive\", \"Reward coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-12-01T14:14:36.663Z",
+    "user": 1,
+    "content_type": 23,
+    "object_id": "59",
+    "object_repr": "Nmclp en lobby 21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-12-01T14:15:38.528Z",
+    "user": 1,
+    "content_type": 24,
+    "object_id": "22",
+    "object_repr": "Lobby #22 - nightmare_freddy (finished)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ended at\", \"Current turn\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-12-01T18:54:06.193Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Perfil de tester1 (monedas: 2000)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-12-03T12:28:24.600Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "Perfil de Yohan (monedas: 0)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipped weapon\", \"Equipped helmet\", \"Equipped armor\", \"Equipped pants\", \"Equipped boots\", \"Equipped shield\", \"Equipped amulet1\", \"Equipped pet\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-12-03T12:35:09.261Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "8",
+    "object_repr": "Yohan - piso actual 0, max 0",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Current floor\", \"Max floor reached\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-12-03T15:49:22.176Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 0)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-12-03T15:50:01.479Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "Perfil de Koro (monedas: 257)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-12-03T15:51:49.272Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Perfil de Benzuino (monedas: 216)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-12-03T15:52:38.167Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "Perfil de kilepeo (monedas: 204)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-12-03T15:56:25.672Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "Yohan",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-12-03T19:00:28.664Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "Yohan",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-12-03T23:01:25.664Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Perfil de king_pantera (monedas: 12)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-12-04T16:26:51.541Z",
+    "user": 1,
+    "content_type": 24,
+    "object_id": "22",
+    "object_repr": "Lobby #22 - nightmare_freddy (running)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Ended at\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-12-04T19:45:13.120Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "9576",
+    "object_repr": "The Original (Ascendida - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-12-04T19:45:39.460Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "9576",
+    "object_repr": "The Original (Ascendida - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Speed\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-12-04T19:48:45.854Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 12)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-12-04T23:02:09.580Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 8182)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-12-04T23:24:07.208Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2929",
+    "object_repr": "First Strike (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-12-05T00:55:16.318Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 0)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-12-05T00:55:26.146Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-12-05T01:00:40.552Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3232",
+    "object_repr": "test (Bßsica - Mascota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Defense pct\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-12-05T01:00:59.789Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 13)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipped pet\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-12-05T01:26:34.800Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "10982",
+    "object_repr": "Bßculo de Cristal (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Speed\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-12-05T01:27:52.544Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "10991",
+    "object_repr": "Bßculo de Cristal (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Speed\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-12-05T01:34:44.950Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4362",
+    "object_repr": "Nmclp - retire (85 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\", \"Result\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-12-05T01:36:07.530Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4362",
+    "object_repr": "Nmclp - bomb (0 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\", \"Result\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-12-05T01:36:35.323Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4362",
+    "object_repr": "Nmclp - retire (9067 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\", \"Result\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-12-05T01:37:05.217Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4362",
+    "object_repr": "Nmclp - retire (293018230 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-12-05T01:39:18.851Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4362",
+    "object_repr": "Nmclp - bomb (0 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\", \"Result\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-12-05T01:40:00.892Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4396",
+    "object_repr": "Nmclp - retire (35 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-12-05T01:40:12.949Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4396",
+    "object_repr": "Nmclp - retire (1 pts)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Score\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-12-05T15:53:31.388Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 11)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Equipped amulet3\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-12-05T22:36:36.222Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "238",
+    "object_repr": "Publica de kilepeo: me gusta el pene",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Text\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-12-05T23:09:58.651Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 523)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-12-06T01:59:16.054Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "14048",
+    "object_repr": "Gatuso (╔pica - Mascota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Hp pct\", \"Attack pct\", \"Defense pct\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-12-06T02:14:48.856Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "42",
+    "object_repr": "Fredy Cabalaza por 1800 monedas (charpinion)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price coins\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-12-06T02:19:40.663Z",
+    "user": 1,
+    "content_type": 16,
+    "object_id": "4",
+    "object_repr": "charpinion - piso actual 29, max 29",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Current floor\", \"Max floor reached\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-12-06T21:19:58.989Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Kizz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-12-07T00:14:17.079Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "16480",
+    "object_repr": "Escudo Pantera (Legendaria - Escudo)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Defense\", \"Hp\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-12-07T23:54:32.930Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 7)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-12-08T23:50:02.575Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 2105)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\", \"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-12-08T23:50:17.075Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 97)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\", \"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-12-09T07:09:48.960Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "53",
+    "object_repr": "Espada Legendaria por 2000 monedas (Nmclp)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price coins\", \"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-12-09T07:10:21.576Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Perfil de tester1 (monedas: 50000)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-12-10T22:17:23.324Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 940)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-12-10T22:34:05.315Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "21885",
+    "object_repr": "Gato Lechuga (Ascendida - Mascota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Hp pct\", \"Attack pct\", \"Defense pct\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-12-10T22:34:59.783Z",
+    "user": 1,
+    "content_type": 26,
+    "object_id": "55",
+    "object_repr": "VIP: Gato Lechuga por 0 monedas / 30 rubÝes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-12-10T22:36:17.760Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 690)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-12-11T21:47:04.562Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "king_pantera",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-12-12T16:09:16.065Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "23140",
+    "object_repr": "Pachirizu (Legendaria - Mascota)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Hp pct\", \"Attack pct\", \"Defense pct\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-12-13T00:30:38.589Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Perfil de king_pantera (monedas: 8133)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-12-13T00:33:44.652Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Perfil de Nmclp (monedas: 1400)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-12-13T03:09:11.213Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "58",
+    "object_repr": "Mao mao por 3000 monedas (charpinion)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-12-13T03:09:17.685Z",
+    "user": 1,
+    "content_type": 25,
+    "object_id": "58",
+    "object_repr": "Mao mao por 3000 monedas (charpinion)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-12-13T23:15:06.637Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-12-13T23:15:29.412Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-12-13T23:15:46.078Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-12-13T23:16:04.227Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-12-13T23:16:20.657Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-12-13T23:16:35.122Z",
+    "user": 1,
+    "content_type": 28,
+    "object_id": "1",
+    "object_repr": "Sorteo Mega MIX (En espera)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\", \"Winner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-12-14T02:21:59.541Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 1910)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-12-14T23:32:12.642Z",
+    "user": 1,
+    "content_type": 26,
+    "object_id": "38",
+    "object_repr": "VIP: Ancient Scarab por 0 monedas / 12 rubÝes",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-12-16T02:48:47.707Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "3",
+    "object_repr": "Expedition 81M68V7E (finished)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-12-16T02:48:47.707Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "2",
+    "object_repr": "Expedition 7MBHZRUO (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-12-16T02:48:47.707Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "1",
+    "object_repr": "Expedition ENEROE2F (finished)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-12-16T04:12:55.810Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "4",
+    "object_repr": "Expedition XGBN25 (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-12-16T04:22:47.434Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "6",
+    "object_repr": "Expedition AXRG2O (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-12-16T06:48:13.735Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "11",
+    "object_repr": "Expedition BLQ6YW (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-12-16T06:48:13.735Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "10",
+    "object_repr": "Expedition VQ6I52 (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-12-17T01:24:08.573Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "Perfil de cushuu (monedas: 9989)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-12-17T01:25:33.230Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "16",
+    "object_repr": "Expedition MGXVAC (finished)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Floor\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-12-17T01:26:16.933Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "16",
+    "object_repr": "Expedition MGXVAC (finished)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-12-17T23:05:47.172Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 15166)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Coins\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-12-18T03:17:35.736Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "31",
+    "object_repr": "Expedition 6QKIA7 (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-12-18T03:17:35.736Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "23",
+    "object_repr": "Expedition UDFMO2 (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-12-18T03:17:53.844Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "19",
+    "object_repr": "Expedition 2LO7SL (finished)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "74",
+    "object_repr": "Expedition JZRASS (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "73",
+    "object_repr": "Expedition ZGDIR7 (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "72",
+    "object_repr": "Expedition 0ODHJU (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "71",
+    "object_repr": "Expedition BN2LVS (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "70",
+    "object_repr": "Expedition 4C8GVK (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "69",
+    "object_repr": "Expedition IE5A6N (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "68",
+    "object_repr": "Expedition 1OEMUL (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-12-18T23:27:23.161Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "67",
+    "object_repr": "Expedition 6QKGMW (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-12-20T06:09:52.326Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "88",
+    "object_repr": "Expedition FBHN2H (waiting)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-12-20T06:09:52.326Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "66",
+    "object_repr": "Expedition KGCJU5 (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-12-20T06:09:52.326Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "59",
+    "object_repr": "Expedition UWB555 (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-12-24T00:36:50.355Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "28697",
+    "object_repr": "Rosario (Ascendida - Amuleto)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\", \"Speed\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-12-25T05:23:10.171Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "166",
+    "object_repr": "Expedition E88HHO (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-12-25T05:23:10.171Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "164",
+    "object_repr": "Expedition 4TBG3M (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-12-25T05:23:10.171Z",
+    "user": 1,
+    "content_type": 30,
+    "object_id": "118",
+    "object_repr": "Expedition W5GTUC (running)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-12-25T22:10:43.237Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2956",
+    "object_repr": "Sopaper MÝtica (MÝtica - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-12-25T22:17:38.912Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29291",
+    "object_repr": "Arco Prismßtico (MÝtica - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-12-25T22:17:56.362Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2956",
+    "object_repr": "Sopaper MÝtica (MÝtica - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-12-26T00:01:56.364Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29307",
+    "object_repr": "Gorro de Santa (Ascendida - Casco)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Hp\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-12-26T00:02:09.850Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29307",
+    "object_repr": "Gorro de Santa (Ascendida - Casco)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-12-26T00:03:21.693Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Perfil de king_pantera (monedas: 140)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-12-26T00:03:42.152Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 86)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-12-26T00:04:00.621Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 1181)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-12-26T00:04:13.694Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 14)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-12-26T00:04:30.305Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "Perfil de vanurem (monedas: 1590)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-12-26T00:06:28.174Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29309",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-12-26T00:06:41.026Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29310",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-12-26T00:06:54.328Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29311",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-12-26T00:07:05.289Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29312",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-12-26T00:07:16.108Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29313",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Attack\", \"Crit chance\", \"Dodge chance\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-12-26T00:07:38.510Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29309",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Defense\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-12-26T00:07:58.040Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29310",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Defense\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-12-26T00:08:10.830Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29311",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Defense\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-12-26T00:08:30.587Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29312",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Defense\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-12-26T00:08:46.099Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "29313",
+    "object_repr": "Bast¾n de Caramelo (Legendaria - Arma)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Defense\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-12-26T22:20:03.099Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Perfil de martintomatin (monedas: 176)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-12-26T22:20:16.496Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Perfil de king_pantera (monedas: 3020)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-12-27T09:49:36.036Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 123)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-12-28T08:44:54.937Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Perfil de SAI (monedas: 1931)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-12-28T08:45:16.689Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Perfil de king_pantera (monedas: 215)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-12-28T08:45:43.728Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Perfil de charpinion (monedas: 376)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Rubies\"]}}]"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "moderador",
+    "permissions": [
+      29
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Ws7d07liyN6ixFFtA5EZbh$wCjXYKe3+apHUSZTzyK2BMgoek7VohMMdGUOAXCTiso=",
+    "last_login": "2025-12-19T18:06:49.483Z",
+    "is_superuser": true,
+    "username": "Nmclp",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-25T17:56:08.595Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$YYXEVmXZ6G0X9FrE4jLMUA$PdnUrCeq9g19UpJ3auTWOOqyb/qfZpr8uYKRRgKhno8=",
+    "last_login": "2025-12-01T12:13:25.129Z",
+    "is_superuser": false,
+    "username": "yarkobich",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-25T18:05:08.838Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$QVdXvPNGu0LcWy3jkwDWbp$mWECmONE3w+eA+kPr3FojidihGZTBwMPc6E8iIdcnxI=",
+    "last_login": "2025-11-25T18:06:58.930Z",
+    "is_superuser": false,
+    "username": "Benzuino",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-25T18:06:47.999Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NHLjQWZgwO2bol4R34tHaN$bxsB0y6MFWo/BrzafTwLjbZaLIU0ruJFBe+NHeN6psA=",
+    "last_login": "2025-12-31T03:14:59.386Z",
+    "is_superuser": false,
+    "username": "charpinion",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T00:12:51.816Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$YY0lxgq59S2TZi0UteRNPy$5bBxpb1D16Z8ZVOSwKRbIKnKWIqhmtnznXTGTQMQPL4=",
+    "last_login": "2025-12-09T12:50:57.099Z",
+    "is_superuser": false,
+    "username": "vanurem",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T00:33:13.405Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$MbH5M2mzcLPlkOfMzwqqj2$bRaab67UWi2+VZLIhYpd3XTp5Wz+hwNiClioZhML3pY=",
+    "last_login": "2025-12-29T01:33:59.196Z",
+    "is_superuser": false,
+    "username": "Koro",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T01:01:11Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dBUtWsN4xmNnSl87TkCAEB$rXllYnUFPOIBjedCL4z+44emo4eD+af2anlCyj0lses=",
+    "last_login": "2025-11-26T01:54:19.750Z",
+    "is_superuser": false,
+    "username": "ferfer123123",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T01:54:18.329Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$XGNX1gvQLiPLvEC20pTXbB$rqTiYPV5kIcHAT+scg/DXW54zdyfLrtXqYzNCQmx5qo=",
+    "last_login": "2025-12-06T17:52:53.540Z",
+    "is_superuser": false,
+    "username": "kilepeo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T02:48:28.850Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RsE3fxMIeTukKjyCamyQP0$uJ9hslk/+dxn2E5yeMpgEoSrz08uLX3OQYPyQOIbzSc=",
+    "last_login": "2025-11-26T14:50:51.232Z",
+    "is_superuser": false,
+    "username": "Sonpi",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T14:50:49.496Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vw6sT5NXeSWdfEP1zowpzP$zKH+AklPuGF0k6EZuYa/gb+UIJ5h6G2mJZ+RMLpoNeQ=",
+    "last_login": "2025-12-16T04:13:49.934Z",
+    "is_superuser": false,
+    "username": "tester1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T19:50:24Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$rP6sCM9ZPgMRLNqnHgg03T$d8BXahXJBk+LMDi9wTmtJyuePz3y0G8Bg1QioX8L/Uk=",
+    "last_login": "2025-11-26T20:25:28.526Z",
+    "is_superuser": false,
+    "username": "cushuu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T20:25:26.821Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cPAi85ABJtAegiu3yUsQFP$bmv4RsXeMC9Eg1ufwyRx4eOam0bXhw0nPviCIdIyND0=",
+    "last_login": "2025-12-19T00:10:19.839Z",
+    "is_superuser": false,
+    "username": "sopapo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T22:47:55.136Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$WdTq1Rq32v4DiXHKE6u14Q$/WUUppQHY1sucl1+QunSE7UG8i9q0FM4DsiYJ7IxRxc=",
+    "last_login": "2025-11-28T12:09:07Z",
+    "is_superuser": false,
+    "username": "Kizz",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-26T23:46:33Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nJm2Z35errpmpeNXtWXvt7$hToYzMhitMEjXh15AxEbdveNNn89fYujnyx+bv2GrnE=",
+    "last_login": "2025-11-27T00:46:23Z",
+    "is_superuser": false,
+    "username": "Yohan",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-27T00:45:56Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yCRaeXWIKKFTjtiwcYaO0B$cuGXwNNOnT/vd9sxMNxqA6uWQWMdDCZzXV1XC9m6bZs=",
+    "last_login": "2025-12-26T06:06:29.075Z",
+    "is_superuser": false,
+    "username": "king_pantera",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-28T10:11:14.508Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vKy9yby2b2VDMISba003Wx$BvcWuwSQ7xvwOOMKxte4fAeVxCLBOtXJPuIPR5iVI/Q=",
+    "last_login": "2025-11-28T11:38:02.134Z",
+    "is_superuser": false,
+    "username": "momown",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-28T11:38:00.529Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ny0BgGwtDEcPvl78OFd4z2$C3/8OPqaU0pjefOn9+0dzgEjGLxQ8afuhppCdNehu+Y=",
+    "last_login": "2025-12-07T08:57:28.111Z",
+    "is_superuser": false,
+    "username": "martintomatin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-29T05:46:27.328Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RPS1cAbsXfPSeIdtsaVEt6$e5zAmio0+uaT/AcqDHLvxsWZcNjGEfYn4ucFYwl53Oc=",
+    "last_login": "2025-12-02T21:23:17.883Z",
+    "is_superuser": false,
+    "username": "adictaamigotica",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-29T06:25:30.153Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$0jpSlqOwhGr7QSZgc7n4gn$Imuzt8OF1hANDk+CwOGc1dta77b6x8fLJISuP4xds5k=",
+    "last_login": "2025-12-23T06:46:58.245Z",
+    "is_superuser": false,
+    "username": "SAI",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-01T01:45:06.278Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$a02QrG7QfAU6IikmemYQOj$GF1IQxCMtRXtGPwp/95gtDqX+aRSlXZjf+IdMUg7SDo=",
+    "last_login": "2025-12-07T06:40:48.370Z",
+    "is_superuser": false,
+    "username": "sukumbias",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T03:22:55.014Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$YE4TSZWhT49doJ8GOgYIzn$2yyganO5n6oOpxbWL2x444MRBInUpqEd6jJG8MC3sms=",
+    "last_login": "2025-12-03T21:41:10.002Z",
+    "is_superuser": false,
+    "username": "pesi",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-03T21:41:08.456Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$hwWTXriqudo6QVSyYxzzka$La8UEWE0H3v6pJuFF5TbR4wnE+xixALI8Tj6//C8HhA=",
+    "last_login": "2025-12-06T12:51:12.720Z",
+    "is_superuser": false,
+    "username": "const",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-06T12:51:11.286Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$CQOC8KJkjvp6WKyBsgsu3M$rVBpyb86hIshg0IUimgIrtId060Rf+7mvTp3/DeStzo=",
+    "last_login": "2025-12-08T22:19:27.651Z",
+    "is_superuser": false,
+    "username": "LaNERR",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-08T22:19:25.965Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$7iJYkwAsMIwcJiDZzdh2gJ$HrYwWAQWhzfk+WiIMLFNnpyCyrb+5rTbkpoF04Dr//o=",
+    "last_login": "2025-12-20T06:10:18.613Z",
+    "is_superuser": false,
+    "username": "Nanna",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-12-20T06:10:16.993Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "017ggy2l91khpfbpzus410238zpcv5el",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtWl4TBFcuvcbyADTUsViCl0Z_9026UK395x73szh2pJbKy1uiuzChGSn39FjeNC8k3jHeSxdKHNbJt_tSnfQ2t1KpHw93L9Awpq2NxeapOI8SpCaUOrgrYGzpdhHEBasEQEtKAWoBgHGDFJ74ryHaL2Ke3R5jW7EkNBlrM3VXNoWTpSf1NjnCz6xQn8:1vQk1J:8BTZmmCDch4zpjxOKH13eZii2FxeFN81kbzaHy5wyN4",
+    "expire_date": "2025-12-17T10:23:37.849Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0b7mw2zzswi15fc2gmpj4pzavi7o3rl9",
+  "fields": {
+    "session_data": ".eJxVUMluwyAQ_RfOsQUBbOJj7v2CqEKAx0tLIDK4VRXl3zsgH9rL6PGWWXgSbfa86D3BpteRDIRxcvpLWuM-IRRl_DBhjq2LIW-rbYulPdTUvsUR_PXw_muwmLRg2nRCcGDSCQcdnSaprBop46B6CczyycHkuDRKARNWqHPPhLhAx-VI0Wax6faY9WzcYrQ3KevkY8bGNsacUL2vAVC-g07ZZCDDk2zxO5GB0RNx0R-o2BDeCG0Eprqm3MubvtbCXJoOq6xYNLJiXnFhaFVZ9Z8bWqusKVp5Tt5xUfgC4wE_7Yav5OKG6-DsstiOw8nDm581zJhY1qwdeE-GsHv_ev0Cfnd2Rw:1vS2Nv:5No_Ym1kvguBJ3fkNx3ioLVPb94-EikRqGTA9tpKn4Q",
+    "expire_date": "2025-12-21T00:12:19.007Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0jr4vhl18gelrd086zmyp3d6gv9jaecr",
+  "fields": {
+    "session_data": ".eJxVj01uxCAMhe_Ceoj4CYHMsvueoKoQIZ5JWiZUgWkXo7l7jZVFy-IJ2Z_fsx_Mh3td_L3A7teZnZmU7PS3OIX4CVvrzB9hu-Yu5q3u69Q1pDu6pXvNM6SXg_1nsISy4LQSalTaauNAgXGxt_0QBj2LGGGMbhr6oMeLuEgLFxCTDk4pMw0Wn3a902h6Wzfw13ADX2qowM4Ptuefws5SnFjM6fg1DL9vTHGFU5Y7VM0N6sAHVMl7VMUtVdq9PTGSuuPBO2IEqiFSkINF_v3EdviGkGBuMSNBltRRpCFTwzUZSTLSFCDJSDSLEvOON-DC7Zo7bsxSLhWBZa0-QkpYaaFPjPu64uFxCT6FUn1JuWKzLCukmT1_AQZWfNc:1vVN9v:_S77lBIqngbr7j_pvWD4zZPKejboL4vVV_0p_1f_Y9w",
+    "expire_date": "2025-12-30T04:59:39.076Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "12mlvkobbp0mmsstg6hhq9p7d6zxbu8u",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vQltH:iiztHYieNvP0QNv4h3o6W8YlORU7cizh1-FqMaOqJYM",
+    "expire_date": "2025-12-17T12:23:27.659Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "13ru5a59tnq9r2smct4wk8q0zj3lnj29",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm28S-U9DmDtd5d4wBypDipEHeHSCmgfTPzXiLBtta0dV7SROIitBKn3zEDPrjthO7QbrPEua3LlOWuyIN2Oc7Ez-vh_h1U6PVbDwbOGgfQxMW5QsZbzsWGgMH7kD1GYwEDMoJBdAodaacsE0cbIzjx_gAhhDjJ:1vQ8Rw:P1wvNYbxD1sy20kAiRgl43FB7F7kGQ_rWsfspYnYSa0",
+    "expire_date": "2025-12-15T18:16:36.350Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1f9vagd608gtkkpzkff1zhoy75kliot5",
+  "fields": {
+    "session_data": ".eJxVkMluwyAQht9lzrFlFuPlmHufIKoQgfHSEogMblVFefeOUQ7t5dMw8_-z8ABt9rzoPeGmVwcjSDj9zV2N_cRwFNyHCXOsbQx5W6_1Ialf1VS_RYf-_NL-a7CYtJAbOW87LjtnpFVOCRStEIo5q2yvmn7o1SQZd03rBF4tThNXk5mGtpu4YWgbanpbA-rZ3FCnbDLC-IAtficYWXMCG_0rOmQUXmCoenINVUdsC2UliLxQVi2xrwaiqJqSlyVzKFnxdhUrSlY6iEIG7yfY8AuNR_qWC72SjRutQ7OPxXYaDndvftYwk2NZs7boPYxh9_5J3vtMV9jFaG9S1snHfBhMyAmevx1adp0:1vVLQX:KL0GbXCB4ex3whMbHI7AYHoldgIQ_eJ24QPOU39L3F4",
+    "expire_date": "2025-12-30T03:08:41.101Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1sz64imqnr3pfcyseuwq0rbn9br01thw",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vQZ2K:PzQ7ngq9M-3SOGyst4VXuvWCN6-ujplP9GR8o3FCci0",
+    "expire_date": "2025-12-16T22:39:56.840Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "21tsel7z1tpuz04djcrtwcr3j35ai4we",
+  "fields": {
+    "session_data": ".eJxVkE1yhCAQhe_CWiwVEZzl7HOCqRTVYvuToKQEk8XU3D0N5SLZvIJ-X79ueDIDZ1zMGfAw68huTLLib20A-4l7MsYP2GdfWr_HYx3KhJSXG8o3P6K7X-y_gAXCQt1d1QulGilAQicmOeCEtlay0qBH7JrJQg2qQdAKRY-1mJDwAap-RA1NQ6HbuqOZYUMTIkRktyc7_E9gt7oqmPXuOiWMjg-muaCujvekVVbNFaniKa3NqrnMTE0qsraZaXO95m3mU2_DK1JJ7nvBDvxGcEjf8qBbsP6gdWh2Wuyk4cz5EAlf1mgsOkeVlP6izq-Z3mAXMA5CNMH5SCZsp8PIXr-r2HUX:1vYC6p:rv4EaBApAgRdz5MEEKP7JQcwLZRI1vjv0utkhAYk_0Y",
+    "expire_date": "2026-01-06T23:48:07.060Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "26fqpdorpyzvta49i4ejs413cry9mc27",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm28S-U9DmDtd5d4wBypDipEHeHSCmgfTPzXiLBtta0dV7SROIitBKn3zEDPrjthO7QbrPEua3LlOWuyIN2Oc7Ez-vh_h1U6PVbDwbOGgfQxMW5QsZbzsWGgMH7kD1GYwEDMoJBdAodaacsE0cbIzjx_gAhhDjJ:1vVMRa:px9rErDqM_xUV3t6MsmLXNFR_C8sVeDQiDpC0u-kEw8",
+    "expire_date": "2025-12-30T04:13:50.139Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2lu5sely96avx32c0iritmof5lcz12zz",
+  "fields": {
+    "session_data": ".eJxVkE1uxCAMhe_i9SQiJIQky-57glGFCDg_LQOjQDqqRnP3OiiLdvPJPL-HDU9Qek-L2iNuarUwQA2Xv9qozRf6o2E_tZ9DaYJP2zqWh6U8u7F8Dxbd2-n9d8Gi40Jp2TJmxShrLnTH6q7io5j6VhrejR2zDY6sr7HlPZ9sI0yLU4PSSs5Nj6Kujq1uq0c16xuqmHRCGJ6whUeEoWIXMMGd1WGj8gqyqCjVF4LYFi2RF11WemKX9SZTFDx3m8xjVpWddU6JgmVKIqP64wIbfqN2SN9ypVM0YaN1aPax2E7D4e70z-pnSixrUgadg8Hvzr0oe5_pFWbRyumYVHQhUeCB-h48vH4BprV2Dg:1vQuhV:8sapjBWV00O_CnZ1ebHIb45YTTk1GNbThzlPayNR0wc",
+    "expire_date": "2025-12-17T21:47:53.313Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2lzqke9qe6ew5dd4j8l23fuv6wrfjiqr",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCBAoJL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIJU6_W8L84LYDumO7zTLPbV2mJHdFHrTLcSZ-Xg_376Bir9_agEkKMzGAd0O23kIgxYpLSlzAc0HI5MBpq4eAaEkHg8rlouyZBhTvD_CFOEU:1vSqmg:ycYFKTlXlJ-q2Aq0yVhSRdw6OTPJOzm-sy1LwzscFXY",
+    "expire_date": "2025-12-23T06:01:14.469Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3zdukl0cjg1esxow240xyz7ytk24npwd",
+  "fields": {
+    "session_data": ".eJxVT8tuxCAQ-5c5J1EgL7LH3vsFVYUmMHm0bKiAbQ-r_fdO2Bzai2XZxmPuoPGWVn2LFPRm4QKygeKvOKH5pP1w7Afui6-M31PYpuqIVKcbq1dvyb2c2X8FK8aVXxtlx1bVc81kJtuTbYSgrqZZjQPNsmslNVa2JBSqWRlUStpR1pLmqacJufS67aQXvJKOCRPB5Q7B_0S4iLoA493JjhjTN2jKll915cDYZy7KjlGVKutP7LM-Mg45WZ_Y5OSTC0aZ82Mp4b2AQN-EjuxxRrBU8LE-12U7Gh94H485lt54DTgfEwfWLWlDzrFynHtw1dfCnzIraocx6eh8YhPD1Qd4_AJIf3hq:1vWNmE:AmCydv9P7PvyhPsBOzvsibj48e_NU6l-qR4YNO9J14c",
+    "expire_date": "2026-01-01T23:51:22.338Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4s160oovlye8wsjr80z8x1nez4kjim1j",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0ucM1u7a4ABypDipEHeHSCmgfTPzXiLhtta09bKkKYuzUFacfkdCfpS2k3zHdpslz21dJpK7Ig_a5Tjn8rwc7t9BxV6_dbQwXBV6NAwMFCJxKApZm-AysSNrwEcfio4mWHDBwaCBjUcmLtGJ9wcCBDe6:1vTv2H:1MYepiBdw2Xg-krw6M5Djk8GbYlYda4S4wY7gfSDf40",
+    "expire_date": "2025-12-26T04:45:45.855Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5090crixm2ja0ycznivr8dfeyu22l0t4",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQRe_iGlnjeJkJJT1nsMbLkACKpSwV4u4QKQW0_733Xyrytg5xW-ocx6LOqgN1-h0T50eddlLuPN2azm1a5zHpXdEHXfS1lfq8HO7fwcDL8K1tj8VnDqWj5LMVcSgGwCAxOERnRFA8QyCwOSTjkIg6NNR7cR5RvT_xSDbR:1vRIjd:KOfnHTcJfPG5lS1NocOn4LKE3MVvS4V2vjJP9tVyQ7c",
+    "expire_date": "2025-12-18T23:27:41.081Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5s8ww4ct0yk99g6fxbjgyxhu3flg9bec",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQRe_iGlnjeJkJJT1nsMbLkACKpSwV4u4QKQW0_733Xyrytg5xW-ocx6LOqgN1-h0T50eddlLuPN2azm1a5zHpXdEHXfS1lfq8HO7fwcDL8K1tj8VnDqWj5LMVcSgGwCAxOERnRFA8QyCwOSTjkIg6NNR7cR5RvT_xSDbR:1vRm7m:BHf12aP56Gefqw505xMKFS7YcPzpH233MlW3uIKiE6c",
+    "expire_date": "2025-12-20T06:50:34.400Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6jmyr5n7oule39wuahjeoocgpsgfa9jf",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCBAoJL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIJU6_W8L84LYDumO7zTLPbV2mJHdFHrTLcSZ-Xg_376Bir9_agEkKMzGAd0O23kIgxYpLSlzAc0HI5MBpq4eAaEkHg8rlouyZBhTvD_CFOEU:1vVJ1j:EnfLi9KlhjDw68FO9LRE6qrT5Y_jbBWiyqENrMUAMPk",
+    "expire_date": "2025-12-30T00:34:55.393Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7ffh5bpha5ao1xe6j1ywbjjhygnyjkdf",
+  "fields": {
+    "session_data": ".eJxVUMtuxCAM_BfOm4iQhJAc994vWFXIAefRElgF0qpa7b_XQXtoL6PBMx7bPJiGIy36iLjr1bKBNezytzaC-UR_CvYD_BxKE3za17E8LeVLjeVbsOiuL--_gAXiQt0oRNuJprPQGGlljXVb17KyRholueqVnJpKWN7aGkeD0yTkBFPfdpOACg2n0P0-6xnMAtpBTDq6kCgYtsNhInlbPZK-oY4JErLhwfbwHdlQ8Qszwb3YaSN6Y6o4T22KnrDNvCuqjIKwz3WeUWSVFy2hyh5V8NzbZC5ygiKsyf9Om-IXgkP6tRu9ogk7rUOzz8UOGs7uDn5WP1PHsiZt0Dk2-MO55_MXFZx3BQ:1vVbp7:NPvu5jV5tPJF1_DVyiV1jvRLEnUr0_8tD862tG5-qYE",
+    "expire_date": "2025-12-30T20:39:09.869Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8aw666guzz30r1iylteuge57tiakttta",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vQNaM:Xp_3WxY8HwdMVpADE2Z0luEMayEPs2JgAWbKFEypHcQ",
+    "expire_date": "2025-12-16T10:26:18.013Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8lidq7szp31df2vj909vurfm9yyriyf1",
+  "fields": {
+    "session_data": ".eJxVj01uxCAMhe_COkQQCD9Zzr4nqKqIgDNJywQpJO1iNHcvWFm0m09P9vOz_SSjO49lPDPs4xrIQDrS_K1Nzn_BVhvh02331Pq0Hfs6tdXSXt3cvqUA8XZ5_wUsLi9lWgWnJBijlRTcS--9mzrBQ1DA5tmCDnY2PhjGpA_cBGs1hzkoObF-9saU0Me6wXh3Dxjz4Q4gw5Ps6SeTgbOG-BQvVW1FvhNNZZliVCNVoaE1p0ctUEvaF2rUhnZYrxWFsxx1TwV2BTot-WjIDt_gIoS6xlJWGpZyZIcUSInskQqpkQZpMRTjsk97-accXz87y_UkpnwUw7Ieo4cYS6Wufr1-AXOHdac:1vOk6t:RZn9yrga4vKTfFc9ddMKFVoYZnZyoM51LetrkepWCBY",
+    "expire_date": "2025-12-11T22:05:07.654Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8zj5x4gi7el69ut89w0r2hmg83ut85w2",
+  "fields": {
+    "session_data": ".eJxVkMtuwyAQRf-FdbB42TFedt8viCo0Bmq7JRAZ3KqK8u8dUBbt5miYuXce3ImBo6zmyH43myMT4YKc_iZnsJ8-1or7gLikzqZY9m3uqqR7VnP3mpwPL0_tvwYr5BXdjA9eSMacUGLwIAY761GdtXe9U1wrPXILWkmpQL5zNY7vYpg9Y71yepauNr1u0ZsFrt7kAsWT6U729J3JxNmJ2BSeUZVheCGC1lsUVUhJh8aa0bRvHJGMaqRo5E3JqWyZoVVrfKZn5NhcPbreTmT3Xx6Cx2-54CvbtOM6OLsuduBwcgvws8UFHetWjPUhkCkeITzQe1vwCruCCZCLySGVaoBYMnn8AmmPdc0:1vPf6w:S4o79A1o-8ZOO1PG_A9yDqvZuUBKjGuOReYjT6QmzQo",
+    "expire_date": "2025-12-14T10:56:58.465Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8zoif7sc7lxoe0k9vsmopqw6tdfpyef0",
+  "fields": {
+    "session_data": ".eJxVUMluwyAQ_Zc52xabF3zsvV8QVQjDxHZLoDJ2oirKvxeQD-3l6fGWmRFPUPrYF3VE3NRqYQTKoPorTtp8oc-O_dR-Do0Jft_WqcmR5nRj8x4surcz-2_AouOS2oR2yDghlgnWoWadmeQgeom2tYJKIQdqtBScC82vVAzDlXUTEtIKKydu89Db6lHN-oYq7npHGJ-whUeEkZIKTHAny7FEL9DWbWqRmifsC28L56fSF5cUJbtDwb4WCUVNC-Zkd7q0cAofFWx4R-0wfcslvaIJWzon7c6HHWk5fDv9s_o5NZZ1Vwadg9Efzr1evzgratw:1vOjQF:8YglHAbNg3jZg6Sbk3Ra_lRG-Ni0YzSA-2yrz7_eEaM",
+    "expire_date": "2025-12-11T21:21:03.206Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9bovmrrshp0wodx84gwtorr344dwkovm",
+  "fields": {
+    "session_data": ".eJxVUMluwyAQ_Zc5G4vNNviYe78gqiwME9stgcpLqyrKvxeoD-3laXjLLDxgMMc-D8eG67A46IFxqP6So7HvGLLi3kyYYm1j2NdlrLOlPtWtfokO_eX0_mswm21Oacpa5IJSxyVv0fDWjlrJTqNrnGRaasWs0VIIacSNSaVuvB2R0kY6PQqXm96XgMNk7jhsu9kR-ges8WuDntEKbPRnlW2pvEJLREoxki9qSFswM5w0hacJFZEJu6LSUguiCvPL0-JUJZVRkw5eK1jxE43H9C3X9NpsXNM6aXZe7EjD4cOb7yVMKTEv-2DRe-jD4f3z-QM5R2rk:1vQzRR:kKiadEku9XIILXw1B2ynZv4itoEkqAqcW7QcfQE_Eh4",
+    "expire_date": "2025-12-18T02:51:37.553Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "aveiikduacy7f0s5o7r8etzqb0g8lpto",
+  "fields": {
+    "session_data": ".eJxVTstuhDAQ-5ecF0QgQMJx7_2CqorCZHi0WbIioXtY7b93knJoL5Zljz1-Mm2OuOgj4K5XywZWs8tfbTTwhVsy7KfZZl-C3-K-jmU6KU83lG_eoruet_8KFhMWSnfWdAKl7DvRcBAAYMa64dZ2WE2Twt6qSYKVVSXAcmmV6jlOthNj1U4gJZXu91nPBhajnQlRB-cjFT_Q3P1G9m3dkPwb6hBNRDY82e4fgQ28ujDw7mTpjOg7U0VLKVX0hFXBCZuiybzNmF7yrKiMohAZu4wp1WdeZ70pVEbOPmgpfqNxaNOb-lcK4HfaRAPSuoMWMOdDpMyyRg3oHCmp_PX6AQERdlk:1vQ2u7:UJ23ep9b9tuKe4uUJCYm17E88oZriWJc5ALBHDPHHog",
+    "expire_date": "2025-12-15T12:21:19.829Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "awc793z23e5silm1gy2vlg65x8zs25ae",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYoanNiBJXvOUDl2QgoolfpZIe4OlbqA7ZuZ9zI9r0vt1zlP_aDmbNAcfrfE8shtA3rndhutjG2ZhmQ3xe50ttdR8_Oyu38Hlef6rSPlENzRC5XM0nUeTpAYJHUM3iH4Qug0MIag6iBiUiEEKpEoiXfm_QHVfDdy:1vQqY6:Ggj46PIpsJeo1CBtI0929nkUJGScaI8GDCXzPJG_B9w",
+    "expire_date": "2025-12-17T17:21:54.592Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "axcqy3viniltqxbv50atfbx5o0xnd2xk",
+  "fields": {
+    "session_data": ".eJxVkMFuhCAQht-FsxgQQdjj3vsETWMQxtXWlUS0PWz23TvMemgvXybMN_NneLDeH_vUHxm2fo7swiSr_r4NPnzBWhrx06-3VIe07ts81EWpz26u31KE5Xq6_xZMPk843Yp2kD5EEMIaFbTVwkUJEsZhgFFYGL0I0QjT6EY573VsXOulCaPUXVQel97nFfqbv0Ofd78DuzzYln4yu0hRsZCWsyoalu9McIFTmjuk5RYpuCFqZMsVsdyrqFa8IV-RI6m2NFv8jmYd79hHxTb4Br9ALDEdjZmThtQW2ZwBjmiJr-CWwjQ5HVKebKhraI-lPR3VL9-R40p8DmnD-_HY8hMHXsuWlHcUpnnvAyxL-XHMfz5_AVTbfSI:1vQ6Fo:HjCyk7Eq5X0RuaPiJB2-UZkcSNVXY7_DYWLVku5fnac",
+    "expire_date": "2025-12-15T15:55:56.091Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b3bk17snkperz26ikwtahd1oby30veju",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAGSgWX7nsGMjCDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwk7gIGMTpd4yYHlx3QnestyZTq-syR7kr8qBdTo34eT3cv4OCvXxrxiEbSODBWXTZKzwrnwxbDcgOc_bOQ44JDWga8-ids9YgG43EikC8PxG5OGo:1vOQ90:b4tXejQclO9n4BienLUV8SzgOMMlLf05CjPSBxMtpHM",
+    "expire_date": "2025-12-11T00:45:58.012Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b5vq7bu56j0a39n6pkojp6znimhmakhf",
+  "fields": {
+    "session_data": ".eJxVkM9uwyAMxt-Fc4lC-ZfmuPueoJqQAzTJRqEKZNVU9d1nUA_b5Sdjf59t_CAG9rKYPfvNrI6MRJHD39wE9svHWnCfEOfU2RTLtk5dlXSvau7ek_Ph7aX912CBvKB70F5KdhRWXzzYvhf8xCfgduqBC6a4uGjFnAQlpXOMD2pyViuuL4PWkxUMm17X6M0MV29ygeLJ-CBbumcysv5AbAqvqMowPBNOBbpOVDYekbyR0ROypxwpaN8oG-sUTesFFNUtUzm0Prp5JSo_DmTz3x6Cx7Oc8ZVt2nAdnF0X23E4uQX4WeOMjmUtxvoQyBj3EJ7ovc34C7uACZCLySEVNNw93FIkz18DnXZg:1vUv4J:6o_lkzmiA0NdLvRyNnhBKYfanlZbU8ZXUpc3FkrimV8",
+    "expire_date": "2025-12-28T22:59:59.668Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b9wyg6nvqbzc00uhgg2y11lrelmfma4v",
+  "fields": {
+    "session_data": ".eJxVkMFuwyAMht-FcxNBQgj02PueYJoQAafJRsMU6Hao-u4zXg7b5ZP1_79tzINZdy-LvWfY7RrYmXXs9FebnP-ArRrh3W3X1Pq0lX2d2hppDze3LylAvBzZfwMWlxfsVsEpCVqPSvbCS--9m7pehKCAz7OBMZhZ-6A5lz4IHYwZBcxByYkPs9cah-6fV3t1fnE2ulxsjqng4CmlktG9rRugfQObiyvAzg-2p-_MzoKfmE_xqGoMy1cmGoFdQ6OJPbKnujtYFdV0VA9I3XAkJ5c3hpSakc1IGUGKZG_4UPgCFyHUNYbaDNmGxhlqMxitHIiKOBI18XdB5UhUxIEoiT2xIwokLs4-7Xg5nln_4I53sphywcCyFushRlTq45_PH3Gih64:1vQ6aZ:ZZuiCjDNSLkzd_H3IJRuJyn1ByuQwX6hL-nZWLTyZMc",
+    "expire_date": "2025-12-15T16:17:23.257Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ba5cuioemkvm3hmwxqpvxza29h42nmgu",
+  "fields": {
+    "session_data": ".eJxVjMsOgyAUBf-FdUNAwYtddt9vIJeX2BowgOmi6b9XExft9syceRONW4t6q77o2ZEr6Ri5_I4G7dOng7gHpilTm1Mrs6GHQk9a6T07v9xO9y8Qscb93Y_gpMXBdcpI24cgIHDGOChkAkDwECBIZINivR0MF6CU6oCrUQYhAfZoWSc9oY2oF6xN1yW3PfzyuOZEPl9Fy0IZ:1vQdc1:LHkxG9uvjBGLPfMt08_uLGvfhD_S4xZmpQma9MOhRc0",
+    "expire_date": "2025-12-17T03:33:05.111Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bff8ul7i9rwse1hmn9zva9m0zpb2gwli",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQRe_iGlnjeJkJJT1nsMbLkACKpSwV4u4QKQW0_733Xyrytg5xW-ocx6LOqgN1-h0T50eddlLuPN2azm1a5zHpXdEHXfS1lfq8HO7fwcDL8K1tj8VnDqWj5LMVcSgGwCAxOERnRFA8QyCwOSTjkIg6NNR7cR5RvT_xSDbR:1vR64K:gMk8G3yhlyaa2A5nrLgrVVtkfvXa2cCEIA453USOfGM",
+    "expire_date": "2025-12-18T09:56:12.467Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d7n8lj42vio904s3atpyfysomhdzp74z",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vWO4Z:MLs4oEmMqPmbZq8RXG97FGSlomHiU_LXXyl2pcmJ_Nc",
+    "expire_date": "2026-01-02T00:10:19.843Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "eib1f58muf85k1hf3dej212y0vbfw63y",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYoanNiBJXvOUDl2QgoolfpZIe4OlbqA7ZuZ9zI9r0vt1zlP_aDmbNAcfrfE8shtA3rndhutjG2ZhmQ3xe50ttdR8_Oyu38Hlef6rSPlENzRC5XM0nUeTpAYJHUM3iH4Qug0MIag6iBiUiEEKpEoiXfm_QHVfDdy:1va291:JFvLq4V58T_1ANATWzOVzVr6BiwwkkQHtTWt37JTPqY",
+    "expire_date": "2026-01-12T01:33:59.206Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "eo04252ccof9ek4glzdtfsxzma7ybo91",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQRe_iGlnjeJkJJT1nsMbLkACKpSwV4u4QKQW0_733Xyrytg5xW-ocx6LOqgN1-h0T50eddlLuPN2azm1a5zHpXdEHXfS1lfq8HO7fwcDL8K1tj8VnDqWj5LMVcSgGwCAxOERnRFA8QyCwOSTjkIg6NNR7cR5RvT_xSDbR:1vQjvJ:rFkLI_bKgxOTE32H9GfBRZc3Pcey7R3H1xUB1fySuhw",
+    "expire_date": "2025-12-17T10:17:25.630Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ez2dzafdwteirkw2r1zefglb17e2syvj",
+  "fields": {
+    "session_data": ".eJxVTstywyAQ-xfOwYNtHibH3vsFnQ6zxpvYLTEZQ5pDJv_ehfjQXjRCElo9mINbnt0t4eaWiR1Za9nhrziC_8a1ONMXrOfY-LjmbRmbEml2NzXvccLwtmf_FcyQ5tLbC-lx0NNp7O3JaiuU174z3aCNpLfUbY-gpVByksKM2tuT6tQAyhojoKPS7Xp2Z_AzuAApuxRipuI7wjWuZF-WFcm_oEsZMrLjg23xntixFQfmY9hZiRH9YJYb-qV4qTZcEmreE_aVS26rLiqWZFv1lmtCu2dU5W3tKZmOGj5pKf4gBJzKGcOHWv3C10ldQsnHjVbSpLL3RptYiClTYF6y8xgCKeXE8_kLJAF3uQ:1vTyhT:rj_DDFK3ey0ms9PfS6dCzHBTJBcnun6SH8rcHYQFSB8",
+    "expire_date": "2025-12-26T08:40:31.221Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g8hame3xiot47qyy29bk6lc2w65x2ke7",
+  "fields": {
+    "session_data": ".eJxVkE1uxCAMhe_i9RAlIEKSZfc9wahCDnF-WhJGgbSqRnP3OnQW7ebpYb5nG-5g8UizPSLtdhmgAw2Xv7Ue3Qdt58XwjtsUChe2tC99cSLF8zYWr2Eg__Jk_zWYMc6crstWGSO1Qo21GnVPI7nK6LLBZqBajg4rNJKwMaRaqtRIjPdYtgM1KCU3XZeN7IQr2ZgwEXR32MNXhK4qL-CCf7oTY3sFKUpOVaJmlcKwNtkr0bLWQubKr29YTeZroTN_kjpXTGaMUDmr4O0CO30SeuJvufIpurDzOjz7XOzg4XDz-L1sEyfmJVlH3kO3Hd4_OHub-BVuRusxJht9SBzA9fCU4PEDy-N3MQ:1vXq0e:HZfGn34qc8U1gbieta9mvz3Iy9ShidLK7Oi4zfvNwoo",
+    "expire_date": "2026-01-06T00:12:16.659Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "geowf6u44javibb7wls3jkojfs62qtv7",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0ucM1u7a4ABypDipEHeHSCmgfTPzXiLhtta09bKkKYuzUFacfkdCfpS2k3zHdpslz21dJpK7Ig_a5Tjn8rwc7t9BxV6_dbQwXBV6NAwMFCJxKApZm-AysSNrwEcfio4mWHDBwaCBjUcmLtGJ9wcCBDe6:1vXWxn:iFXbI8Zw86l_gz4QaDiB5c5_blZnvCCWeWil5Bbusb4",
+    "expire_date": "2026-01-05T03:52:03.829Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "giast5co7zh5ktqdf7dh2lor5fd1mw1g",
+  "fields": {
+    "session_data": ".eJxVULtuwzAM_BfOsWFZtiN57N4vCAqBlulHq0iBJTcogvx7aSFDuxyo492R4gMM7mkxe6TNrCP0IBo4_SUHtF_kj874iX4OpQ0-betQHpLy1Y3lexjJvb20_wIWjAu7CZtJCiu0UC2qSVd4rrSV1NYCSeE0aaXFNFiUoh67qdNKta1EkjWOVI2CQ6-rJzPjlUxMmAj6B2zhHqEX1QlscK_qkHF5gXOh2aWKOmPLqIuKURRdxiPzXEjGOvNNoTJzXEBmps4JMnvb3G1Y_3GCjb4JHfFZLvyKNmy8Ds8-Ftt5ONwc_qx-ZseyJmPJOej97tyTvbeZf2EXNA5jMtGFxIY74S14eP4CIAJ3Vg:1vQE0d:VB0d5Q5d4SeHY3EFDEA_7qgqGsNS1Ng70yUamyplcWw",
+    "expire_date": "2025-12-16T00:12:47.493Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hs0htq21nmyf4ngjs6n2gc85v5k2l87d",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vRXIX:3LAQ457Km8ISwHJNiM5Pat0DCjcL3WjOg9_2-Ukb8k4",
+    "expire_date": "2025-12-19T15:00:41.358Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hwwqph5guotonu37yiuuh1mklunzj168",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fsNZIBpUZvSFBoXxn-3TbrQ7T3nnjfzuLbs10qLvyd2YVKx0-8YMD5p2kl64DQUHsvUlnvgu8IPWvmtJBqvh_sXyFjz9hbSkNJCJAXKECoTg7NwdpS6BNKBszKiA60BdS_B2l6ZQEJ0kFzQaY8u8-AHjBn9iLX5Opa2hV-Ec5nY5ws_DEKK:1vQpQ3:1GSjr4RGnqDpgeD5BN7p1U_KH02p1UfhhBogHt7Isz0",
+    "expire_date": "2025-12-17T16:09:31.004Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ib3wrhu3q5rvhdm68oktqymhza1fvs83",
+  "fields": {
+    "session_data": ".eJxVzEEOwiAQheG7sDYEWqaAS_eegQwMLVVSTKEr491tky50-_6X780cbi25rcbVzcSurOvY5Xf0GJ5xOQo9cJkKD2Vp6-z5ceFnrfxeKObb-f0DEtZ0uIC2lwReSDuOWooBemOMCloLZaQVHYEA4SVoNF6RknpQMAJFr5RVdkfX1-QmDAldxtpczaXtcE1zzMQ-Xw5TQZc:1vRsdA:37t9t0f6ZxNcMCVUtI_bRP87ELbfRSNOKoXugDDH964",
+    "expire_date": "2025-12-20T13:47:24.406Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ibnq12kpvis9vbowz3ugc0yal3rj1qcl",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxb-1Q0nOGaL27xgEUS_lUiLtDpBTQvpl5LzXgttZhW2QeRlZn5dXpd8tID5l2wHecbk1Tm9Z5zHpX9EEXfW0sz8vh_h1UXOq3FmtDtD4yegIGJy44B4YJKEGX-gTFG8tdYCeZpBQLBUsfYrFohDr1_gDTvjgM:1vamfr:GKDwYAhRo8dYnRBk_9c_w0wS7NwCfIOdJJv8PLxJ8x8",
+    "expire_date": "2026-01-14T03:14:59.396Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j1ug0u3daxjwpjgjfu7fkus8v626y6py",
+  "fields": {
+    "session_data": ".eJxVT0FuwyAQ_AvnYIFtsMkx976gqtAa1rFbYipD2kOUv3ehPrSX0Wh3Znb2wSzc82LvCXe7enZmkp3-ziZwH7iVhX-H7RobF7e8r1NTJM2xTc1L9Bguh_ZfwAJpIXcv-kmC8yjEqDunRiWMlyhxniacxYgzCOe10K1qOwOgfGt6kNrNUg2-Awq9rRvaK9zQpgwZ2fnB9vid2FmKE3MxHKzIiL4ywwdyKS4IDe8JW64IJR8JdUVTsePl64G3hKJq-soN76pSV-9YvQN7O7EdvxAC-nJG1wPqsHU17pfrOq-G5OJOjale6X6nfizElEmwrNk6DIEm5dCTwj-v9KZbwAZI2aYQMy3TsmLw7PkDfJR7FA:1vYGkq:YDH8yPsKl6gpUHzAmAt0OXreIO5OjBRKmOi5OK6htWw",
+    "expire_date": "2026-01-07T04:45:44.699Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jpo1xthai734jmxxwrsi3i06mbcnpvrj",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCBAoJL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIJU6_W8L84LYDumO7zTLPbV2mJHdFHrTLcSZ-Xg_376Bir9_agEkKMzGAd0O23kIgxYpLSlzAc0HI5MBpq4eAaEkHg8rlouyZBhTvD_CFOEU:1vWesL:WhmX7luAUmHqGYoqzVSXpA_JEHILtJbQ1ukKBRoD_ug",
+    "expire_date": "2026-01-02T18:06:49.490Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k0stbwu7p9c9asjiv6e4u3c8xpnsk1re",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtWl4TBFcuvcbyMDQUsViCl0Z_9026UK395x73szh2pJba1zcROzChGSn39FjeMR5J3THeSxdKHNbJt_tSnfQ2t0KxXw93L9Awpq2Nxc6SsU5SZA6otTBWwNnG6knEBasEQEtKAWoBgHGDFL7yHkPZL2iPbq8RjdiSOgy1uZqLm0L43PNsbHPFz7iQog:1vQQUm:y_6qBRywBCI1ecjEYEjDPCmHXwzVfL7COkZ7UJMNoxY",
+    "expire_date": "2025-12-16T13:32:44.883Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lp5sjj5gy3gwnb8limrujrphgg68lkl4",
+  "fields": {
+    "session_data": ".eJxVUM1uhCAQfpc5rwbQVfTYe59g0xDEQW1ZMILdNJt9947EQ3v5Mnw_88MTlN7TrPaIm1pG6IFLuPwlB22-0B_K-Kn9FEoTfNqWoTws5anG8j2M6N5O778Gs44zpZmtWNNYqavKipoxKzmvuGAoW9mwkfG2bm1jhGZjJ6WwvBu7AQUO3HI22Jaa3hePatJ3VDHphNA_YQuPCD1nFzDBndVho_IGrKgpVRUVYV00hF1m-MnwjIKwKRjhNfNtITOyrB6MKK45VWePhI8LbPiN2iF9y41e0YSN1qHZx2I7DYfV6Z_FT5SYl6QMOge93517UXad6Aoza-V0TCq6kCjwQL0GD69fzOF2GQ:1vQXq9:XXoaahm3ze7p0gBNrJJTJWCaDz5DSLToroYbDG3LU6M",
+    "expire_date": "2025-12-16T21:23:17.887Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m0cyh1ocfbfiyl8v1pdn0gdksvu4cb2v",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBpgQFcuu8ZyDADtmrapLQr491Nky50-997_60S7duY9lbWNIm6Kq8uv1smfpb5APKg-b5oXuZtnbI-FH3SpodFyut2un8HI7XxqI2DGsCDAEplMl1kxNJnrpVRnEVvOJCvfaRSLUQBMMFGz-hCl1F9vvMAN-U:1vO4jb:LbCY4EprJrxOKQEpBZY-az5shH5Pqyi3nnkzuZAiL3Q",
+    "expire_date": "2025-12-10T01:54:19.754Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m3ldgqhn6gbt486g28mkyuyu38dyy4dc",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0ucM1u7a4ABypDipEHeHSCmgfTPzXiLhtta09bKkKYuzUFacfkdCfpS2k3zHdpslz21dJpK7Ig_a5Tjn8rwc7t9BxV6_dbQwXBV6NAwMFCJxKApZm-AysSNrwEcfio4mWHDBwaCBjUcmLtGJ9wcCBDe6:1vZ0y5:FbfU-xkGC5CoBvCSzQsty56CouJ_3wA2rmrCtczZDIY",
+    "expire_date": "2026-01-09T06:06:29.080Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mppdla8iqlz5k24chy4v0kow15ades8f",
+  "fields": {
+    "session_data": ".eJxVULtOxDAQ_BfXl8jPJL6Sni9AyNrEziXgi1HsQHHi31kvKaAZjXZmdrx-MAdHWdyRw-5Wz65sYJe_sxGm97BVwb_BdkvtlLayr2NbLe2p5vY5-RCfTu-_BQvkBdOd5MGDBQNS9yNI1c3adEaEwRo7WyOFHOWkhNUd552XygcxczP7fta6A4FL7-sW3A3uweUCJbDrg-3pK7Or4Bc2pXiyakP6wmxjMSWbmjVNh6gajmhpIpuBuCRVI_LGIGriPTn7c_KbNYSKvV7YHj4DxOBrDacacZo0BRQtFbSi4kA1ltSBnAPVG8oa4up8rqJtotbkKe14Jx5VLz7wKhZTLmhY1uKmECNO6rO_8UkfN_ycaQEXIReXYyoowv2IobDvHyIugxg:1vSiqY:JeO7aMchEJacqIjKS1rpOVGJlhG0iJlWyQXVZ9pmoq4",
+    "expire_date": "2025-12-22T21:32:42.939Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mwh2fcvp7i86rjwn3llgky4zir1vn6td",
+  "fields": {
+    "session_data": ".eJxVUEFuxCAM_AvnJQKSELLH3vuCqkIOOJu0bKgCaQ-r_r2G5tBeRpZnPB77wSwcebFHwt2unl2ZZJe_vQncO26F8G-w3WLj4pb3dWqKpDnZ1DxHj-Hp1P4zWCAtNN2JbpLgPAphdOt604vRS5Q4TxPOwuAMwnkttOpVOwL0Xo0dSO1m2Q--BTLdP272Bm4BGyBlm0LMZAz3I2Am-r5uSPwdbcqQkV0fbI9fiV2luDAXw1kVGZUvTPOOptqKHdeEghtCw1vCsdZDrQdenqJOHKqmoOaiKlV1-NUr9kpJ8RMhoC9rZKVlNVJ1meJ97eiKQ-2YGsWU4eTiTukparnjoKwsxFQuXNZsHYZQ3kna7-8fdoR9Hw:1vRa8M:WnCDNZNjuNN_xTZj5Zxq7Gsl2pzrmQxERIcdXMSxdlI",
+    "expire_date": "2025-12-19T18:02:22.587Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nmc0c6wtxqtgm78694pkk2hr6t6nswyk",
+  "fields": {
+    "session_data": ".eJxVUMFuhCAU_BfOYkAE1OPe-wVNQxCeqy0riWB72Oy_90E8tJfJ8GbevAlPYuyZV3MmOMzmyURG0vydzdZ9wV4E_2n3e2xd3POxzW2xtJea2rfoIdwu77-A1aYVtxdh2QizVDAw3btZjbpbFqFcL_XiQEiJDy5Y5721WnaSzYNmoDljVg1jCX1sO5i7fYBJ2WYg05Mc8SeRibOGuBguVmxI38lAJW51lCEyyhF7KirvECUdqtojqurkFRktPyAq8oqybvErR5GPhhzwDTaAL2dYFXg9IDAa5eTigf2wTGl6YhsSYspoWLdsHISAk1Ls9foFKLJrvw:1vOgrK:Tnt6SG4Sywu5pNG6CoSpJ0mE2JD95zNF67SFH5wiFp0",
+    "expire_date": "2025-12-11T18:36:50.806Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ovrkx7uw3f2otlzrhrxhf7yln616vxi8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHIYxhcuu83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmFnS07_Y4xpAe1neR7aLfOU2_rMke-K_ygg0890_N6uH8HNYz6rTWgIDRCJrK6KIGktQbjCJNWpuQiSQRI4BIIUFFKhwJIGlQWAY1l7w_kGTau:1vSAa5:tkKQVmMxskQ66YcOlIqtxTw9lvjoBhvQviv23IxcDsY",
+    "expire_date": "2025-12-21T08:57:25.610Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qbs6h6r1jwybi8dlj8aahe5coou1zu98",
+  "fields": {
+    "session_data": ".eJxVkM1uhSAQhd-FtRhRftRl932CpiEDjFdbriSC7eLmvnuBumg3J5OZ7xxOeBANZ1r1GfHQmyMz6Rlp_i4N2E_cy8V9wH4LrQ17OjbTFqS9rrF9DQ79y8X-C1ghriVXAXA3TMYIJRn0AhiAUsahMExyRM6NcrD0E6oFFjvhMnLWoeukEtyUVvdtR32DO-qYICGZH-QI35HMrGuIDf6aCpbHN8LomF2SFu9YVVUd6JB1orJqn7Wv5EBFVka7uld1I6uqmvObJsh7Qw78QvDoyjPqglg18xonKioLGm04ctdcrLQ-czPiQ0wZWLekLXpffieHP58_jj5vdg:1vR0h8:y9O5bYVg66OWVnj88RxkkVYFIVefLftbaAQz3OO0vKg",
+    "expire_date": "2025-12-18T04:11:54.345Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qogqdc2mdkpg76u3cnwytvh7a2ko8uhe",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEz0MDg0r3fQHiNVA0kpV0Z_12bdKHbe865L-HDtla_jbL4OYuzQBKn3zGG9ChtJ_ke2q3L1Nu6zFHuijzokNeey_NyuH8HNYz6rYE1GMMUtGY1ATAhalRQyJKBDGgnyyapANkRKUaXXSyqRGSEyFa8P9dnNz8:1vPEOh:7bxgnAOKu9oQfDYi3eG0q1FZOWfCGj0llh7Tm2lRxig",
+    "expire_date": "2025-12-13T06:25:31.643Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rff569y564t0pvya7lt9bsxptadxrnje",
+  "fields": {
+    "session_data": ".eJxVUEluwzAM_AvPliFFm-1j7n1BUAjavLSKXHhpUQT5e2nVh_YyGHGGQ1IPMHbfRrOvcTFTgA4UVH9rzvr3mA8hvNk8zLWf87ZMrj4s9amu9cscYrqe3n8Bo11H7G50lJJdhNd9tJ5SwVvuLPeOWi6Y4qLXigVplZQhMN4oF7xWXPeN1s4LhqH3KUcz2Hs062a3CN0DlvlrhY7RCvycTnbYkN6AkuOWhkjES-GSNIiUHGkt0aXeIoqCumBTVEEooiK8-H89l9LF4LWCJX5GmyJ-yw1fq58XXAdnH4vtOBw-kv2e8oAd47QZH1OCLu8pPZ8_Xy1rIA:1vSQ7l:Lft09QTs2PaWuwPgcFDS3ZW-mRE1TncXJL5T5r0D68g",
+    "expire_date": "2025-12-22T01:33:13.469Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rjd06e8oeez8393z7obrwf0otxqptp9c",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQBe9CHSE-awIp0-cMaGGxcWJhy-Aqyt1jSy6S9s28eTOPW8t-q2n1I7Ebk4pdfseA8ZXKQeiJZZh5nEtbx8APhZ-08sdMabqf7l8gY837W0iTlBaCFCiTUJkYnIWrS9QRSAfOyogOtAbUvQRre2VCEqIDckHTEV2XwQ8YM_oJa_N1mtseXrC0yj5f_EpCJg:1vQk5w:eI5SzF7Zy5pZsyE28Je_re-O2_cr9ThcBuuNxbOww3U",
+    "expire_date": "2025-12-17T10:28:24.846Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rmy05bqz12ccsoosrz3q7oyfpzsojouz",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fcbyMBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJM4mL0EacfseE-cF1J3THemsyt7ouc5K7Ig_a5diIn9fD_Tso2Mu3VtqxsUqRAeMYjcspeDgHpoFABwheZwxgLaCdNHg_GZdYqQEoJEsk3h_c2jdC:1vQoSd:G9tqdy3Sn7VZGtdGYy08cENtpvy9bGbHDwzAtY53OiE",
+    "expire_date": "2025-12-17T15:08:07.573Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s8tl460wtszjirbdfusukkh4ptpslfnv",
+  "fields": {
+    "session_data": ".eJxVkE1uxCAMhe_i9SQiCSEky-57glGFGOL8tAxEgXRUjebuNSiLdvNkHu-zDU9Q-oiLOgLuah1hgKqDy1_zps0XunQzfmo3-9J4F_f1VqZIed6G8t2PaN_O7L8Giw4L0VxIhrJltcGOTw2TyDkXbY_S8KadxqlGpoURvRFMNLe67iUTWLey6aSQbdrqvjpUs76jClFHhOEJu38EGCp2AePtWaUYlVeQRUOULBIrCkHaZBWFJGUFy05Pyos6-zzn-1wntspOlTv0Z58WPi6w4zdqi_QtVzoF43dah2anxQ4aDpvVP6ubiVjWqAxaC4M7rH0Ru830CrNoZXWIKlgfCXig3ryD1y9tunWv:1vaVuw:VXCCjszGW9W6QSJCBdfYsmsA7njL3E6HTi-UZycL3Zs",
+    "expire_date": "2026-01-13T09:21:26.930Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sg6u9i7chuq2e8is99ixxz3r3j7sp3kj",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmxvf5R0ucM1u7a4ABypDipEHeHSCmgfTPzXiLhtta09bKkKYuzUFacfkdCfpS2k3zHdpslz21dJpK7Ig_a5Tjn8rwc7t9BxV6_dbQwXBV6NAwMFCJxKApZm-AysSNrwEcfio4mWHDBwaCBjUcmLtGJ9wcCBDe6:1vToW9:xGhleE7NROjJ1RN7h3vPSJj5H1yUMYw7MS7ZIKTKXTc",
+    "expire_date": "2025-12-25T21:48:09.462Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "st9lr4hpjjkm5mwwkidv9bxgznn80mqh",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSF0eLt07zcQYAapGkhKuzL-uzbpQrf3nHNfLMRtrWEbtIQZ2ZlJdvrdUswPajvAe2y3znNv6zInviv8oINfO9Lzcrh_BzWO-q2tEQJ1shJ0dEK6CZIu3tgMLjmBipLwkgx4KKh0NlQUWbQA2ZOWk2TvD732Nx8:1vNxRB:UcQvvz8PTj3nEwDLdZJZJXQ2dXcJ9B9szDwg5CX76N0",
+    "expire_date": "2025-12-09T18:06:49.633Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "t8e91h5dz24f4r7mc2kl8ejmwb0ri0dd",
+  "fields": {
+    "session_data": ".eJxVkMtuwyAQRf-FdbCwzcN42X2_IKrQGBPbLYHI4EZVlH_vgLJoN6Phzrnz4EEMHHk1R3K72WYyklaT019xAvvlQqnMnxCW2NgY8r5NTUGaVzU173F2_u3F_muwQlpL355x6wY5X6ZeX7TUTFhpO9UNUnF8c9n2DiRngs-cqUlafRGdGEBopRh02PS6BWcWuDqTMmRHxgfZ4z2RsWUnYqN_ZQXD9Ex62qOrpcXbU4ZRUIFxoG3VS85ouVdXRlFZY1G6ystK8qqoyneofJzI7r4deIffcsZXsnHHdXB2WezA4eTm4WcLCzrWLRvrvCdjOLx_ove24BV2BeMhZZN8zGi4O7jFQJ6_hAd1uQ:1vSp7i:RCxym3U7zY6CyBZib9mPWSWZrYIqunc00n5-3SHGLNQ",
+    "expire_date": "2025-12-23T04:14:50.747Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tr8x8064qnuc16l0jwztpc2lgwebzv19",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8pggu3fsNZIBpUZvSFBoXxn-3TbrQ7T3nnjfzuLbs10qLvyd2YVKx0-8YMD5p2kl64DQUHsvUlnvgu8IPWvmtJBqvh_sXyFjz9hbSkNJCJAXKECoTg7NwdpS6BNKBszKiA60BdS_B2l6ZQEJ0kFzQaY8u8-AHjBn9iLX5Opa2hV-Ec5nY5ws_DEKK:1vQjcg:NXac6v3XpdZpCk6VBuO15yxZAhVX-eWEpin9WrxT4ns",
+    "expire_date": "2025-12-17T09:58:10.557Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ty7w3p4n7oxnm28d6pclp85rgmee61gq",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm28S-U9DmDtd5d4wBypDipEHeHSCmgfTPzXiLBtta0dV7SROIitBKn3zEDPrjthO7QbrPEua3LlOWuyIN2Oc7Ez-vh_h1U6PVbDwbOGgfQxMW5QsZbzsWGgMH7kD1GYwEDMoJBdAodaacsE0cbIzjx_gAhhDjJ:1vPCDz:9e8s2l6rB8r1TctUGRYgu_sF4HWKQv-M6pjpDzvhO-Y",
+    "expire_date": "2025-12-13T04:06:19.825Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uckm3olnib0ciqcn4rblhnhqam6g7li5",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCYMrS4dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWkzj9boHiI9Ud8J3qrcnY6rrMQe6KPGiX18bpeTncv4NCvXxrCyoxOUICMwaCwWaDFnWaHLrsEDQEiIN2xiplGQZOOivMPGZjLGnx_gDLkDcS:1vRwSj:nf2okcJZdB4WJOh6GfBZG70tyAFb6jx_0QIYNQkaW7o",
+    "expire_date": "2025-12-20T17:52:53.551Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v4w13g08jv8kmfjzzd91kl4av2xe0irq",
+  "fields": {
+    "session_data": ".eJxVkMtuwyAQRf9l1sECY_Bj2X2_IKoQhontlkBk7EZVlH_vGGXRbo6GmXvnwQOM3bfZ7BlXs3gYQCg4_U2O1n1hPCr-08YpVS7FbV3G6pBUr2qu3pPH8PbS_msw2zwfbl6jqlvu6l5p6Tuprew7jWPddq6R2vPGN6OyXjtSCUUiIQWqDi_CXS4tNb0uEc1kr2jyZjeE4QFrumcYBD-BS-EVHTIKz6AYJ1fPJLFmHVGUWDFBlEwXtoVHvmOq6BsiL9SsJjYlz1lfvA18nGDFb7QB6VvO9MourbQOzT4W22k43IL9WeJEjnnZjMMQYIh7CE_y3ia6ws3WBJs3k0PayHBHe0sRnr_ng3Yv:1vSlQT:mqrmz5Oj1zENsfovYz1IhGz2t27za1J31Nokb417l1U",
+    "expire_date": "2025-12-23T00:17:57.631Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w258dqtllli191em84i6kaxsssp5u3b4",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHIYxhcuu83EB6DVA0kpV0Z_12bdKHbe865L-bDtla_DVr8nNmFnS07_Y4xpAe1neR7aLfOU2_rMke-K_ygg0890_N6uH8HNYz6rTWgIDRCJrK6KIGktQbjCJNWpuQiSQRI4BIIUFFKhwJIGlQWAY1l7w_kGTau:1vSAa6:hwyR2fAKVjU5gT0Zk3BjJQha-n_FlN5jeT66USXEehs",
+    "expire_date": "2025-12-21T08:57:26.906Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w7zys4qa6pj0lsosrfcr1tmfn21yfciw",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYpC68YxS_Y9Q-XEDi2gROpnhbg7VOoCtm9m3ssMvK3jsC06D5OYi2nAnH7HyOmhZSdy53KrNtWyzlO0u2IPuti-ij6vh_t3MPIyfmsC9N4LsSJoCBlBCKICNpglEpPDxMhB4dwBddJ4n10il6RtOblo3h8EjDgq:1vWqAU:itN1UUpxkSqe90gA-NkUZqLI8Mxtlv3KXXXVjxkVBkY",
+    "expire_date": "2026-01-03T06:10:18.618Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xagot9l9h8r9ik21b3mba7bfqh4ejojs",
+  "fields": {
+    "session_data": ".eJxVkMtugzAQRf9l1gnyC4JZZt8viCprsCdAa3CETasqyr_XWCzazdH4ztx5-AkGtzSaLdJqJgcdcAGnv2KP9pOWPeM-cBlCZcOS1qmv9pLqyMbqLTjy16P2X4MR45jdjDckJGNOKNEQisb2ulUXTa52imulW25RKykVyjtXbXsXTU-M1crpXrq96TwtZAacycSEiaB7whq-I3ScncAGf0R7WQ5vwM4qu1ShLKzPdWGTeTnzwv1eXXRRlPao10WRRWkLRSGD9xOs9EXoKX_LLb-iDWteJ8_eF9vycHh4_JmWITvGKRlL3kO3bN6_svcx5CvsiMZjTCb6kLIB581Tgtcv3712Lw:1vQs9p:H7QkCgikygaZwKY9aM_R-U8r-Pk0P2SwTAn5LsSFCPo",
+    "expire_date": "2025-12-17T19:04:57.419Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xi9z3wcwrz11df6sb58laqlga1e0h8yn",
+  "fields": {
+    "session_data": ".eJxVUMtuhDAM_BefAQXyIhx77xesqiiE8GizSUWgVbXaf68TcWgvo7E9M7b8AG3OY9VncrveJhigVVD9bY7GfriQJ9O7CUtsbAzHvo1NljTXNDWvcXL-5dL-C1hNWnMuJcy6XkzzSNWshCLcCtvJrheSYc1ES50RjHA2MSJHYdXMO94brqQkpsPQ-xacXszd6XSYw8HwgD1-JxhaUoGN_mJZhvQGsqbo6mtVsEcUtSw8p9G6RexKv60ZoiycF1Q1KVwUPS367CKY9lbB7r6c8Q7fcsMq2bjjObg7H3bicvj05mcLCzrW7dDWeQ9DOL1_Pn8BAVlqlA:1vYD6y:AIuRtsJAEQPhhqHLsCPYFMEDJQja1JvnV4hZXlRgpCI",
+    "expire_date": "2026-01-07T00:52:20.365Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y0j9nfg6my11xp3pab9ugrhzfkkpgd72",
+  "fields": {
+    "session_data": ".eJxVUMtuwyAQ_BfOwbKN38fc-wVRhRa82G4JRAa3qqL8exfkQ3sZDTuzw2ifTMIRV3kE3OU2s4lVHbv8HSrQn-iSMn-AW3yhvYv7popkKU41FG9-Rns9vf8CVggrbWPTttXcoULTGDOqUqhEEXpdd2YshaiB0giHGXUpDNFm7oUpx9qovqbQ_bHIBfQK0kKIMlgfKfgBLgZS75tDku8oQ4SIbHqy3X8HNlXlhWlvT5ZsRG9s5A1tDbwnbHlL2PGKsOZ15ukOfZ43fMi8y2ryiIxdVisu8qTJOLB3KopfCBbpaDd6Be13qkN_p2JHSJ0t_GxuoY11i1KjtWxyh7Wv1y8M9nfV:1vOx0F:iqpSjw6bY2jABsazlJkSubZjH0THK0NUP4XAyPDEn7k",
+    "expire_date": "2025-12-12T11:51:07.776Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y8zgbg96q3hb5avil4uz4o5sac4j2st7",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAQRe_iGlnjeJkJJT1nsMbLkACKpSwV4u4QKQW0_733Xyrytg5xW-ocx6LOqgN1-h0T50eddlLuPN2azm1a5zHpXdEHXfS1lfq8HO7fwcDL8K1tj8VnDqWj5LMVcSgGwCAxOERnRFA8QyCwOSTjkIg6NNR7cR5RvT_xSDbR:1vRm7n:PhzEKC9FSuW07X-sbw15fbO9YLt_nGQYXWBhT9BvwMQ",
+    "expire_date": "2025-12-20T06:50:35.902Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zmzroyhutgkx2orn82amf2umu5mu07nj",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAGSgWX7nsGMjCDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwk7gIGMTpd4yYHlx3QnestyZTq-syR7kr8qBdTo34eT3cv4OCvXxrxiEbSODBWXTZKzwrnwxbDcgOc_bOQ44JDWga8-ids9YgG43EikC8PxG5OGo:1vOQ9N:7JO1z7n2nrDyT10paMuabzuSqrv_SK6xPH5coqqzfE0",
+    "expire_date": "2025-12-11T00:46:21.809Z"
+  }
+}
