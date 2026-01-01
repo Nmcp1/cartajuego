@@ -1,16 +1,18 @@
-# config/settings.py  (archivo completo, corregido en lo mínimo)
 from pathlib import Path
 from datetime import timedelta
 import os
+from urllib.parse import urlparse, parse_qs
+
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-secret-key")
 DEBUG = os.getenv("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS = ["*"]
+
+# En prod, mejor setearlo en Render. Dejo fallback por si acaso.
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "*").split(",")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -57,12 +59,40 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+# =========================
+# DATABASE: SQLite local / Neon en Render
+# =========================
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
+
+if DATABASE_URL:
+    # Espera algo tipo: postgresql://user:pass@host:5432/dbname?sslmode=require
+    u = urlparse(DATABASE_URL)
+    # u.path incluye /dbname
+    db_name = u.path.lstrip("/") if u.path else ""
+    qs = parse_qs(u.query or "")
+
+    # sslmode: Neon requiere TLS. Si ya viene en la URL, igual dejamos OPTIONS como respaldo.
+    sslmode = (qs.get("sslmode", ["require"])[0]) or "require"
+
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": db_name,
+            "USER": u.username or "",
+            "PASSWORD": u.password or "",
+            "HOST": u.hostname or "",
+            "PORT": str(u.port or 5432),
+            "CONN_MAX_AGE": 60,
+            "OPTIONS": {"sslmode": sslmode},
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
@@ -92,12 +122,9 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
 }
 
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-    }
-}
-
+# =========================
+# Channels (SIN Redis, tal como pediste)
+# =========================
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels.layers.InMemoryChannelLayer",
@@ -111,8 +138,5 @@ LOGOUT_REDIRECT_URL = "/"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
-# ✅ corregido: sin slash final y con puerto
-CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:8000",
-    "http://localhost:8000",
-]
+# En prod (Render) tu dominio será https://<tu-app>.onrender.com
+CSRF_TRUSTED_ORIGINS = os.getenv("DJANGO_CSRF_TRUSTED_ORIGINS", "").split(",") if os.getenv("DJANGO_CSRF_TRUSTED_ORIGINS") else []
