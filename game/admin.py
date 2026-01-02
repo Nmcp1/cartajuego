@@ -51,7 +51,6 @@ class CardCharacterAdmin(admin.ModelAdmin):
     readonly_fields = ("preview",)
 
     def preview(self, obj):
-        # Prioridad: image_url, si no, image.url
         url = obj.image_url or (obj.image.url if obj.image else "")
         return _img_preview(url, 72)
     preview.short_description = "Preview"
@@ -82,15 +81,16 @@ class CardTrapAdmin(admin.ModelAdmin):
 
 
 # ==========================
-# Inventarios
+# Inventarios (✅ combobox)
 # ==========================
 @admin.register(UserCharacterCard)
 class UserCharacterCardAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "card", "quantity")
     list_filter = ("user", "card__rarity")
     search_fields = ("user__username", "card__name")
-    raw_id_fields = ("user", "card")
     ordering = ("user", "card")
+
+    # ✅ Sin raw_id_fields -> Django usa <select> (combobox) para user/card
 
 
 @admin.register(UserTrapCard)
@@ -98,8 +98,9 @@ class UserTrapCardAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "trap", "quantity")
     list_filter = ("user", "trap__rarity", "trap__trap_type")
     search_fields = ("user__username", "trap__name")
-    raw_id_fields = ("user", "trap")
     ordering = ("user", "trap")
+
+    # ✅ Sin raw_id_fields -> <select> (combobox)
 
 
 # ==========================
@@ -108,6 +109,8 @@ class UserTrapCardAdmin(admin.ModelAdmin):
 class DeckCharacterInline(admin.TabularInline):
     model = DeckCharacter
     extra = 0
+    # Si quieres combobox aquí también: no usar raw_id_fields.
+    # Ojo: si hay muchas cartas, el select se vuelve pesado.
     raw_id_fields = ("card",)
 
 
@@ -152,7 +155,6 @@ class MatchAdmin(admin.ModelAdmin):
     raw_id_fields = ("player1", "player2")
     ordering = ("-created_at",)
 
-    # JSONFields grandes: mejor en textarea
     formfield_overrides = {
         models.JSONField: {"widget": Textarea(attrs={"rows": 6, "cols": 90})},
     }
